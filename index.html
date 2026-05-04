@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2nd Chance Entrepreneurs — Website Strategy</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #0D7377;
+  --teal-light: #0F8A8F;
+  --teal-dark: #095456;
+  --amber: #E8913A;
+  --amber-light: #F2A855;
+  --gold: #C9A84C;
+  --charcoal: #2D2D2D;
+  --dark: #1A1A2E;
+  --warm-white: #F9F6F1;
+  --light-gray: #F0EDE8;
+  --mid-gray: #9A9590;
+  --text: #3D3832;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text);
+  background: var(--warm-white);
+  line-height: 1.6;
+}
+
+section {
+  min-height: 100vh;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ===== COVER ===== */
+.cover {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--teal-dark) 100%);
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+
+.cover h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.cover h1 span { color: var(--amber); }
+
+.cover .subtitle {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 40px;
+}
+
+.cover .meta {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 2;
+}
+
+.cover .meta strong { color: rgba(255,255,255,0.7); }
+
+.cover .badge {
+  display: inline-block;
+  background: var(--amber);
+  color: var(--dark);
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+/* ===== SECTION HEADERS ===== */
+.section-number {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--teal);
+  margin-bottom: 8px;
+}
+
+section h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+section h2 span { color: var(--teal); }
+
+section h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-top: 36px;
+  margin-bottom: 16px;
+}
+
+.section-intro {
+  font-size: 1.05rem;
+  color: var(--mid-gray);
+  max-width: 700px;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+/* ===== CARDS ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 20px 0;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.card .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.card .icon.teal { background: rgba(13,115,119,0.1); color: var(--teal); }
+.card .icon.amber { background: rgba(232,145,58,0.1); color: var(--amber); }
+.card .icon.gold { background: rgba(201,168,76,0.1); color: var(--gold); }
+
+.card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.card p {
+  font-size: 0.88rem;
+  color: var(--mid-gray);
+  line-height: 1.5;
+}
+
+/* ===== TABLES ===== */
+.clean-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+
+.clean-table thead th {
+  background: var(--teal);
+  color: white;
+  padding: 14px 20px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.clean-table thead th:first-child { border-radius: 8px 0 0 0; }
+.clean-table thead th:last-child { border-radius: 0 8px 0 0; }
+
+.clean-table tbody td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--light-gray);
+  vertical-align: top;
+}
+
+.clean-table tbody tr:last-child td { border-bottom: none; }
+.clean-table tbody tr:nth-child(even) { background: rgba(0,0,0,0.015); }
+
+/* Dark section table */
+.dark-section .clean-table thead th {
+  background: rgba(255,255,255,0.15);
+}
+.dark-section .clean-table tbody td {
+  color: rgba(255,255,255,0.85);
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+.dark-section .clean-table tbody td strong {
+  color: white;
+}
+
+/* ===== TAGS ===== */
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tag.green { background: #E8F5E9; color: #2E7D32; }
+.tag.yellow { background: #FFF8E1; color: #F57F17; }
+.tag.red { background: #FFEBEE; color: #C62828; }
+.tag.blue { background: #E3F2FD; color: #1565C0; }
+
+/* ===== DARK SECTIONS ===== */
+.dark-section {
+  background: var(--dark);
+  color: white;
+}
+
+.dark-section h2 { color: white; }
+.dark-section h2 span { color: var(--amber); }
+.dark-section h3 { color: white; }
+.dark-section .section-intro { color: rgba(255,255,255,0.5); }
+.dark-section .section-number { color: var(--amber); }
+
+.dark-section .card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.dark-section .card h4 { color: white; }
+.dark-section .card p { color: rgba(255,255,255,0.6); }
+
+/* ===== TEAL SECTIONS ===== */
+.teal-section {
+  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+  color: white;
+}
+
+.teal-section h2 { color: white; }
+.teal-section h3 { color: white; }
+.teal-section .section-number { color: var(--amber); }
+.teal-section .section-intro { color: rgba(255,255,255,0.6); }
+
+.teal-section .clean-table thead th {
+  background: rgba(0,0,0,0.2);
+}
+.teal-section .clean-table tbody td {
+  color: rgba(255,255,255,0.85);
+  border-bottom-color: rgba(255,255,255,0.1);
+}
+.teal-section .clean-table tbody td strong {
+  color: white;
+}
+
+/* ===== MOCKUP ===== */
+.mockup-browser {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+  overflow: hidden;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.mockup-bar {
+  background: #E8E8E8;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mockup-dot { width: 12px; height: 12px; border-radius: 50%; }
+.mockup-dot.red { background: #FF5F57; }
+.mockup-dot.yellow { background: #FEBC2E; }
+.mockup-dot.green { background: #28C840; }
+
+.mockup-url {
+  flex: 1;
+  background: white;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  color: var(--mid-gray);
+  margin-left: 8px;
+}
+
+.mock-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: var(--dark);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.mock-nav-logo {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: white;
+}
+
+.mock-nav-links {
+  display: flex;
+  gap: 20px;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.mock-btn {
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+.mock-btn.primary { background: var(--amber); color: var(--dark); }
+.mock-btn.secondary { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.4); }
+.mock-btn.sm { padding: 6px 16px; font-size: 0.7rem; }
+
+.mock-hero {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--teal-dark) 100%);
+  padding: 48px 40px;
+  color: white;
+  text-align: center;
+}
+
+.mock-hero h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: white;
+}
+
+.mock-hero p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 20px;
+}
+
+.mock-sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mock-section-item {
+  padding: 24px 20px;
+  text-align: center;
+  border-right: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.mock-section-item:last-child { border-right: none; }
+
+.mock-section-item .mock-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.mock-section-item h5 { font-size: 0.75rem; font-weight: 600; margin-bottom: 4px; color: var(--dark); }
+.mock-section-item p { font-size: 0.65rem; color: var(--mid-gray); }
+
+/* ===== QUOTE ===== */
+.quote-block {
+  border-left: 4px solid var(--amber);
+  padding: 20px 28px;
+  background: rgba(232,145,58,0.06);
+  border-radius: 0 8px 8px 0;
+  margin: 24px 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--dark);
+}
+
+.dark-section .quote-block {
+  background: rgba(232,145,58,0.12);
+  color: white;
+}
+
+.teal-section .quote-block {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+/* ===== NOTE BOX ===== */
+.note-box {
+  background: rgba(13,115,119,0.06);
+  border: 1px solid rgba(13,115,119,0.15);
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: 0.85rem;
+  color: var(--teal-dark);
+  margin: 20px 0;
+}
+
+.note-box strong { color: var(--teal); }
+
+/* ===== SITEMAP ===== */
+.sitemap-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.sitemap-root {
+  background: var(--teal);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.sitemap-connector {
+  width: 2px;
+  height: 20px;
+  background: var(--light-gray);
+}
+
+.sitemap-branches {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sitemap-branch {
+  background: white;
+  border: 2px solid var(--light-gray);
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 130px;
+}
+
+.sitemap-branch.highlight {
+  border-color: var(--amber);
+  background: rgba(232,145,58,0.05);
+  font-weight: 600;
+}
+
+.sitemap-branch.later {
+  border-style: dashed;
+  border-color: var(--mid-gray);
+  color: var(--mid-gray);
+}
+
+/* ===== DOMAIN LIST ===== */
+.domain-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.domain-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.domain-rank {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.domain-rank.top { background: var(--amber); color: var(--dark); }
+.domain-rank.alt { background: var(--light-gray); color: var(--mid-gray); }
+
+.domain-name { font-weight: 600; font-size: 0.9rem; }
+.domain-note { font-size: 0.75rem; color: var(--mid-gray); margin-left: auto; }
+
+/* ===== PHASE TIMELINE ===== */
+.phase-timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 20px 0;
+}
+
+.phase-item {
+  padding: 28px 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.phase-label {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.phase-label.p0 { background: #FFEBEE; color: #C62828; }
+.phase-label.p1 { background: #FFF8E1; color: #F57F17; }
+.phase-label.p2 { background: #E8F5E9; color: #2E7D32; }
+
+.phase-item h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--dark);
+}
+
+.phase-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.phase-item li {
+  font-size: 0.82rem;
+  color: var(--mid-gray);
+  padding: 4px 0 4px 16px;
+  position: relative;
+}
+
+.phase-item li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+/* ===== TWO COLUMN ===== */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ===== COLOR PALETTE ===== */
+.palette {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.swatch {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.swatch-color { height: 80px; }
+
+.swatch-info {
+  padding: 12px 16px;
+  background: white;
+}
+
+.swatch-info h5 { font-size: 0.75rem; font-weight: 600; margin-bottom: 2px; }
+.swatch-info p { font-size: 0.7rem; color: var(--mid-gray); }
+
+/* ===== FOOTER ===== */
+.footer-section {
+  background: var(--dark);
+  color: rgba(255,255,255,0.4);
+  min-height: auto;
+  padding: 40px 60px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  section { padding: 60px 24px; }
+  section h2 { font-size: 1.8rem; }
+  .cover h1 { font-size: 2rem; }
+  .phase-timeline { grid-template-columns: 1fr; }
+  .card-grid { grid-template-columns: 1fr; }
+  .two-col { grid-template-columns: 1fr; }
+  .palette { flex-wrap: wrap; }
+  .mock-sections { grid-template-columns: 1fr; }
+  .domain-list { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- COVER -->
+<!-- ============================================================ -->
+<section class="cover">
+  <div class="badge">Launch Box Deliverable</div>
+  <h1>Website Strategy for<br><span>2nd Chance Entrepreneurs</span></h1>
+  <p class="subtitle">Marketing-informed recommendations for website architecture, design, and development</p>
+  <div class="meta">
+    <strong>Prepared by</strong> StealthEnomics Marketing Strategy Team<br>
+    <strong>Date</strong> May 7, 2026<br>
+    <strong>Client</strong> Bruce "Captain" Kirk
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 1: BUSINESS OVERVIEW -->
+<!-- ============================================================ -->
+<section>
+  <div class="section-number">Section 01</div>
+  <h2>Business <span>Overview</span></h2>
+  <p class="section-intro">Understanding who we're building for and what the organization does.</p>
+
+  <div class="quote-block">
+    "2nd Chance Entrepreneurs is a newly formed Pennsylvania nonprofit providing entrepreneurial training, mentorship, and community support to individuals seeking a fresh start."
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="icon teal">&#9673;</div>
+      <h4>Founder</h4>
+      <p>Bruce "Captain" Kirk, President<br>Thorndale, PA 19372 (Greater Philadelphia)</p>
+    </div>
+    <div class="card">
+      <div class="icon amber">&#9670;</div>
+      <h4>Entity Type</h4>
+      <p>Pennsylvania Nonprofit Corporation<br>501(c)(3) status pending &mdash; fiscal sponsor in interim</p>
+    </div>
+    <div class="card">
+      <div class="icon gold">&#9733;</div>
+      <h4>Service Area</h4>
+      <p>Greater Philadelphia (in-person)<br>Mid-Atlantic region (virtual)</p>
+    </div>
+  </div>
+
+  <h3>Anticipated Programs</h3>
+  <div class="card-grid">
+    <div class="card">
+      <h4>Training & Workshops</h4>
+      <p>Business planning, financial literacy, legal basics, and marketing fundamentals.</p>
+    </div>
+    <div class="card">
+      <h4>Mentorship & Peer Communities</h4>
+      <p>Peer support groups and one-on-one mentorship with experienced business owners.</p>
+    </div>
+    <div class="card">
+      <h4>Resources & Networking</h4>
+      <p>Connections to funding, legal support, technology tools, and community events.</p>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <strong>Action needed:</strong> Please confirm the specific programs 2nd Chance Entrepreneurs will offer so the website accurately reflects the organization's activities.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 2: SITE ARCHITECTURE -->
+<!-- ============================================================ -->
+<section class="dark-section">
+  <div class="section-number">Section 02</div>
+  <h2>Proposed <span>Site Architecture</span></h2>
+  <p class="section-intro">A lean, focused structure. Start with 4 pages, expand as the organization grows.</p>
+
+  <div class="sitemap-visual">
+    <div class="sitemap-root">SecondChanceEntrepreneurs.org</div>
+    <div class="sitemap-connector" style="background: rgba(255,255,255,0.2);"></div>
+    <div class="sitemap-branches">
+      <div class="sitemap-branch highlight" style="background: rgba(232,145,58,0.1); border-color: var(--amber); color: white;">Home</div>
+      <div class="sitemap-branch highlight" style="background: rgba(232,145,58,0.1); border-color: var(--amber); color: white;">About</div>
+      <div class="sitemap-branch highlight" style="background: rgba(232,145,58,0.1); border-color: var(--amber); color: white;">Donate</div>
+      <div class="sitemap-branch highlight" style="background: rgba(232,145,58,0.1); border-color: var(--amber); color: white;">Contact</div>
+      <div class="sitemap-branch later" style="background: transparent; border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.4);">Events (later)</div>
+      <div class="sitemap-branch later" style="background: transparent; border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.4);">Blog (later)</div>
+    </div>
+  </div>
+
+  <div class="note-box" style="background: rgba(232,145,58,0.1); border-color: rgba(232,145,58,0.25); color: rgba(255,255,255,0.85);">
+    <strong style="color: var(--amber);">Launch with 4 pages.</strong> Home covers mission, programs, and impact goals. About tells Bruce's story. Donate handles donations with fiscal sponsor compliance. Contact includes volunteer/mentor interest forms. Events and Blog are added as the organization grows.
+  </div>
+
+  <h3>Domain Options</h3>
+  <div class="domain-list">
+    <div class="domain-option" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+      <div class="domain-rank top">1</div>
+      <div class="domain-name" style="color: white;">SecondChanceEntrepreneurs.org</div>
+      <div class="domain-note" style="color: rgba(255,255,255,0.5);">.org = nonprofit credibility, easy to share verbally</div>
+    </div>
+    <div class="domain-option" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+      <div class="domain-rank top">2</div>
+      <div class="domain-name" style="color: white;">2ndChanceEntrepreneurs.org</div>
+      <div class="domain-note" style="color: rgba(255,255,255,0.5);">Matches LLC name exactly</div>
+    </div>
+    <div class="domain-option" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+      <div class="domain-rank alt">3</div>
+      <div class="domain-name" style="color: rgba(255,255,255,0.7);">SecondChanceEntrepreneurs.com</div>
+      <div class="domain-note" style="color: rgba(255,255,255,0.4);">Register as redirect to .org</div>
+    </div>
+    <div class="domain-option" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+      <div class="domain-rank alt">4</div>
+      <div class="domain-name" style="color: rgba(255,255,255,0.7);">2ndChanceEntrepreneurs.com</div>
+      <div class="domain-note" style="color: rgba(255,255,255,0.4);">Register as redirect to .org</div>
+    </div>
+    <div class="domain-option" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+      <div class="domain-rank alt">5</div>
+      <div class="domain-name" style="color: rgba(255,255,255,0.7);">2ndChanceBusiness.org</div>
+      <div class="domain-note" style="color: rgba(255,255,255,0.4);">Backup option, broader scope</div>
+    </div>
+  </div>
+
+  <div class="note-box" style="background: rgba(13,115,119,0.15); border-color: rgba(13,115,119,0.3); color: rgba(255,255,255,0.8);">
+    <strong style="color: var(--teal-light);">Tip:</strong> Register both .org and .com of your chosen name. Redirect .com to .org. Verify availability on a registrar (Namecheap, GoDaddy) before committing.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 3: HOMEPAGE MOCKUP -->
+<!-- ============================================================ -->
+<section>
+  <div class="section-number">Section 03</div>
+  <h2>Homepage <span>Concept</span></h2>
+  <p class="section-intro">The homepage does the heavy lifting &mdash; mission, programs, impact, and calls to action all in one page.</p>
+
+  <div class="mockup-browser">
+    <div class="mockup-bar">
+      <div class="mockup-dot red"></div>
+      <div class="mockup-dot yellow"></div>
+      <div class="mockup-dot green"></div>
+      <div class="mockup-url">secondchanceentrepreneurs.org</div>
+    </div>
+    <div class="mockup-content">
+      <div class="mock-nav">
+        <div class="mock-nav-logo">2nd Chance Entrepreneurs</div>
+        <div class="mock-nav-links">
+          <span>About</span>
+          <span>Programs</span>
+          <span>Get Involved</span>
+          <span>Contact</span>
+        </div>
+        <div class="mock-btn primary sm">Donate</div>
+      </div>
+      <div class="mock-hero">
+        <h3>Every Entrepreneur Deserves<br>a Second Chance</h3>
+        <p>We provide the training, mentorship, and community to help you build a business and transform your life.</p>
+        <div>
+          <span class="mock-btn primary">Get Involved</span>
+          <span class="mock-btn secondary">Our Programs</span>
+        </div>
+      </div>
+      <div class="mock-sections">
+        <div class="mock-section-item">
+          <div class="mock-icon" style="background: rgba(13,115,119,0.1); color: var(--teal);">&#9998;</div>
+          <h5>Training</h5>
+          <p>Business planning, financial literacy, marketing</p>
+        </div>
+        <div class="mock-section-item">
+          <div class="mock-icon" style="background: rgba(232,145,58,0.1); color: var(--amber);">&#9829;</div>
+          <h5>Mentorship</h5>
+          <p>Peer support and experienced business mentors</p>
+        </div>
+        <div class="mock-section-item">
+          <div class="mock-icon" style="background: rgba(201,168,76,0.1); color: var(--gold);">&#9733;</div>
+          <h5>Community</h5>
+          <p>Events, networking, and ongoing resources</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Homepage Sections</h3>
+  <table class="clean-table" style="max-width: 800px;">
+    <thead>
+      <tr><th>Section</th><th>Content</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Hero</strong></td><td>Headline + image + "Donate" & "Get Involved" CTAs</td><td>Emotional connection</td></tr>
+      <tr><td><strong>Mission</strong></td><td>2-3 sentences: who we help, how, why</td><td>Clarity in 5 seconds</td></tr>
+      <tr><td><strong>Programs</strong></td><td>3 cards: Training, Mentorship, Community</td><td>Show what we do</td></tr>
+      <tr><td><strong>Impact</strong></td><td>Projected goals + Bruce's track record</td><td>Credibility</td></tr>
+      <tr><td><strong>Get Involved</strong></td><td>Donate / Volunteer / Refer Someone</td><td>Engagement paths</td></tr>
+      <tr><td><strong>Founder</strong></td><td>Bruce's photo + short story</td><td>Personal trust</td></tr>
+      <tr><td><strong>Donate CTA</strong></td><td>Impact statement + donate button</td><td>Conversion</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 4: NONPROFIT ESSENTIALS -->
+<!-- ============================================================ -->
+<section class="dark-section">
+  <div class="section-number">Section 04</div>
+  <h2>Nonprofit Website <span>Essentials</span></h2>
+  <p class="section-intro">What makes a nonprofit site effective &mdash; phased by what's available at launch vs. what's built over time.</p>
+
+  <h3>Donation Infrastructure <span class="tag red">Launch Critical</span></h3>
+  <table class="clean-table">
+    <thead>
+      <tr><th>Requirement</th><th>Details</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Payment processor</strong></td><td>Stripe or PayPal Giving Fund (low/no fees for nonprofits)</td></tr>
+      <tr><td><strong>Giving options</strong></td><td>One-time, monthly recurring, custom amount</td></tr>
+      <tr><td><strong>Preset amounts</strong></td><td>$25 / $50 / $100 / $250 / Custom &mdash; each with impact label</td></tr>
+      <tr><td><strong>Fiscal sponsor notice</strong></td><td>Clear disclosure with sponsor name, EIN, and tax-deduction language</td></tr>
+      <tr><td><strong>Auto receipt</strong></td><td>Email confirmation with tax-deduction language</td></tr>
+      <tr><td><strong>Recurring toggle</strong></td><td>"Make this a monthly gift" &mdash; recurring donors are 5x more valuable</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Trust Signals &mdash; Phased Approach</h3>
+  <div class="two-col">
+    <div>
+      <h4 style="margin-bottom: 12px; color: white;"><span class="tag green">At Launch</span></h4>
+      <div class="card" style="margin-bottom: 12px;">
+        <h4>Founder Story</h4>
+        <p>Bruce's background, credentials, and personal connection to the mission.</p>
+      </div>
+      <div class="card" style="margin-bottom: 12px;">
+        <h4>501(c)(3) Status Disclosure</h4>
+        <p>"Donations are tax-deductible through our fiscal sponsor [Name]."</p>
+      </div>
+      <div class="card">
+        <h4>Projected Goals</h4>
+        <p>"Our goal: help 50 entrepreneurs in year one."</p>
+      </div>
+    </div>
+    <div>
+      <h4 style="margin-bottom: 12px; color: white;"><span class="tag blue">Added Over Time</span></h4>
+      <div class="card" style="margin-bottom: 12px;">
+        <h4>Board of Directors</h4>
+        <p>Added once the board is established.</p>
+      </div>
+      <div class="card" style="margin-bottom: 12px;">
+        <h4>Testimonials & Success Stories</h4>
+        <p>Added as participants complete programs.</p>
+      </div>
+      <div class="card">
+        <h4>Partner Logos & Impact Data</h4>
+        <p>Added as partnerships and results are formalized.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 6: VOICE & MESSAGING -->
+<!-- ============================================================ -->
+<section class="teal-section">
+  <div class="section-number">Section 05</div>
+  <h2>Voice & Messaging</h2>
+  <p class="section-intro">How 2nd Chance Entrepreneurs should sound across all touchpoints.</p>
+
+  <div class="card-grid">
+    <div class="card" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.1);">
+      <h4 style="color: white;">Empowering</h4>
+      <p style="color: rgba(255,255,255,0.7);">Focus on potential, not pity. These are future business owners, not charity cases.</p>
+    </div>
+    <div class="card" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.1);">
+      <h4 style="color: white;">Authentic</h4>
+      <p style="color: rgba(255,255,255,0.7);">Real stories, honest about challenges, no corporate jargon.</p>
+    </div>
+    <div class="card" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.1);">
+      <h4 style="color: white;">Hopeful</h4>
+      <p style="color: rgba(255,255,255,0.7);">Forward-looking. Second chances are possible and worth investing in.</p>
+    </div>
+    <div class="card" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.1);">
+      <h4 style="color: white;">Inclusive</h4>
+      <p style="color: rgba(255,255,255,0.7);">Welcoming to all backgrounds. Faith-informed but not exclusionary.</p>
+    </div>
+  </div>
+
+  <h3>Messaging by Audience</h3>
+  <table class="clean-table" style="max-width: 750px;">
+    <thead>
+      <tr><th>Audience</th><th>Core Message</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Participants</strong></td><td>"You have what it takes. We'll help you build it."</td></tr>
+      <tr><td><strong>Donors</strong></td><td>"Your support gives someone the tools to build a business and transform their life."</td></tr>
+      <tr><td><strong>Volunteers</strong></td><td>"Share your experience. Change a trajectory."</td></tr>
+      <tr><td><strong>Grantmakers</strong></td><td>"Structured entrepreneurship training for underserved communities with measurable outcomes."</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 7: SEO -->
+<!-- ============================================================ -->
+<section>
+  <div class="section-number">Section 06</div>
+  <h2>SEO <span>Opportunities</span></h2>
+  <p class="section-intro">Keyword landscape and content strategy for organic growth.</p>
+
+  <table class="clean-table">
+    <thead>
+      <tr><th>Target Keyword</th><th>Competition</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>reentry business training Philadelphia</strong></td>
+        <td><span class="tag green">Low</span></td>
+        <td>No dominant player &mdash; best opportunity</td>
+      </tr>
+      <tr>
+        <td><strong>second chance business programs Philadelphia</strong></td>
+        <td><span class="tag green">Low</span></td>
+        <td>Geo-specific, underserved &mdash; strong opportunity</td>
+      </tr>
+      <tr>
+        <td><strong>how to start a business after incarceration</strong></td>
+        <td><span class="tag yellow">Moderate</span></td>
+        <td>Informational &mdash; good for blog content</td>
+      </tr>
+      <tr>
+        <td><strong>second chance entrepreneurship programs</strong></td>
+        <td><span class="tag yellow">Moderate-High</span></td>
+        <td>Harvard Law, Second Chance Business Coalition rank here</td>
+      </tr>
+      <tr>
+        <td><strong>reentry entrepreneurship programs</strong></td>
+        <td><span class="tag yellow">Moderate-High</span></td>
+        <td>City Startup Labs, DOJ publications present</td>
+      </tr>
+      <tr>
+        <td><strong>entrepreneurship training formerly incarcerated</strong></td>
+        <td><span class="tag red">High</span></td>
+        <td>Dominated by PEP, Defy Ventures, Inmates to Entrepreneurs</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note-box">
+    <strong>Note:</strong> Competition assessments based on SERP analysis (May 2026). Exact search volume and difficulty scores should be validated by the digital team using SEO tools (Ahrefs, SEMrush, or similar) before finalizing content strategy.
+  </div>
+
+  <div class="quote-block">
+    The strongest SEO opportunity is in Philadelphia-specific long-tail keywords where national players aren't targeting. This is 2nd Chance's natural competitive advantage.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 8: TECH + PHASES -->
+<!-- ============================================================ -->
+<section class="dark-section">
+  <div class="section-number">Section 07</div>
+  <h2>Technical Requirements & <span>Development Phases</span></h2>
+  <p class="section-intro">What the dev team needs to build, and in what order.</p>
+
+  <div class="card-grid" style="margin-bottom: 40px;">
+    <div class="card">
+      <h4>CMS</h4>
+      <p>WordPress or equivalent. Client must be able to post updates independently.</p>
+    </div>
+    <div class="card">
+      <h4>Donations</h4>
+      <p>Stripe or PayPal with recurring support. Fiscal sponsor compliant.</p>
+    </div>
+    <div class="card">
+      <h4>Email Capture</h4>
+      <p>Mailchimp, HubSpot, or ConvertKit for volunteers, donors, and participants.</p>
+    </div>
+    <div class="card">
+      <h4>Analytics</h4>
+      <p>Google Analytics 4. Nonprofits qualify for free GA 360.</p>
+    </div>
+    <div class="card">
+      <h4>Google Ad Grant</h4>
+      <p>$10,000/month in free Google Ads once 501(c)(3) is approved.</p>
+    </div>
+    <div class="card">
+      <h4>Performance</h4>
+      <p>Mobile-first. Load under 2.5s. SSL/HTTPS. WCAG 2.2 accessibility.</p>
+    </div>
+  </div>
+
+  <h3>Development Phases</h3>
+  <div class="phase-timeline">
+    <div class="phase-item">
+      <div class="phase-label p0">P0 &mdash; Launch</div>
+      <h4>Get Online (4 pages)</h4>
+      <ul>
+        <li>Homepage (mission, programs, impact, CTAs)</li>
+        <li>About page (founder story)</li>
+        <li>Donate page (fiscal sponsor compliant)</li>
+        <li>Contact page (includes volunteer/mentor form)</li>
+        <li>Email capture on all pages</li>
+      </ul>
+    </div>
+    <div class="phase-item">
+      <div class="phase-label p1">P1 &mdash; Expand</div>
+      <h4>Add Depth</h4>
+      <ul>
+        <li>Events page (workshops, community events)</li>
+        <li>Google Business Profile</li>
+        <li>Social media profiles</li>
+        <li>Newsletter setup</li>
+      </ul>
+    </div>
+    <div class="phase-item">
+      <div class="phase-label p2">P2 &mdash; Grow</div>
+      <h4>Scale Reach</h4>
+      <ul>
+        <li>Blog (SEO content engine)</li>
+        <li>Testimonials & success stories</li>
+        <li>Google Ad Grant application</li>
+        <li>Partner logos, board of directors page</li>
+      </ul>
+    </div>
+    <div class="phase-item" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: rgba(255,255,255,0.03); border: 2px dashed rgba(255,255,255,0.1);">
+      <h4 style="color: rgba(255,255,255,0.5); margin-bottom: 8px;">Ongoing</h4>
+      <p style="color: rgba(255,255,255,0.35); font-size: 0.82rem;">Content updates, impact reports, event promotion, blog publishing, SEO optimization</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 9: BRAND DIRECTION -->
+<!-- ============================================================ -->
+<section>
+  <div class="section-number">Section 08</div>
+  <h2>Proposed Brand <span>Direction</span></h2>
+  <p class="section-intro">A visual identity suggestion aligned with the mission. Subject to client approval.</p>
+
+  <div class="palette">
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--teal);"></div>
+      <div class="swatch-info">
+        <h5>Deep Teal</h5>
+        <p>#0D7377 &mdash; Growth, renewal</p>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--amber);"></div>
+      <div class="swatch-info">
+        <h5>Warm Amber</h5>
+        <p>#E8913A &mdash; Energy, optimism</p>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--gold);"></div>
+      <div class="swatch-info">
+        <h5>Soft Gold</h5>
+        <p>#C9A84C &mdash; Achievement</p>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--charcoal);"></div>
+      <div class="swatch-info">
+        <h5>Charcoal</h5>
+        <p>#2D2D2D &mdash; Professional</p>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--warm-white); border: 1px solid #E0DCD7;"></div>
+      <div class="swatch-info">
+        <h5>Warm White</h5>
+        <p>#F9F6F1 &mdash; Welcoming</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    Teal-green + amber says "growth + energy" &mdash; aligned with "you have what it takes, we'll help you build it." Warm and empowering, not clinical or corporate.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 10: NEXT STEPS -->
+<!-- ============================================================ -->
+<section class="teal-section">
+  <div class="section-number">Section 09</div>
+  <h2>Next Steps</h2>
+  <p class="section-intro">What we need from the client to move forward.</p>
+
+  <div class="card-grid" style="max-width: 800px;">
+    <div class="card" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.1);">
+      <h4 style="color: var(--amber);">1. Confirm</h4>
+      <p style="color: rgba(255,255,255,0.7);">Review business overview and confirm programs/services.</p>
+    </div>
+    <div class="card" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.1);">
+      <h4 style="color: var(--amber);">2. Domain</h4>
+      <p style="color: rgba(255,255,255,0.7);">Choose and register primary domain (.org) + .com redirect.</p>
+    </div>
+    <div class="card" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.1);">
+      <h4 style="color: var(--amber);">3. Fiscal Sponsor</h4>
+      <p style="color: rgba(255,255,255,0.7);">Provide sponsor name and EIN for donation page disclosures.</p>
+    </div>
+    <div class="card" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.1);">
+      <h4 style="color: var(--amber);">4. Content</h4>
+      <p style="color: rgba(255,255,255,0.7);">Professional photo, mission statement in Bruce's words, early stories.</p>
+    </div>
+    <div class="card" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.1);">
+      <h4 style="color: var(--amber);">5. Brand</h4>
+      <p style="color: rgba(255,255,255,0.7);">Approve or adjust proposed brand direction (colors, logo).</p>
+    </div>
+    <div class="card" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.1);">
+      <h4 style="color: var(--amber);">6. Build</h4>
+      <p style="color: rgba(255,255,255,0.7);">Dev team wireframes &rarr; P0 sprint &rarr; launch.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer-section">
+  Prepared by StealthEnomics Marketing Strategy Team &bull; Confidential &mdash; For internal and client use only &bull; May 2026
+</div>
+
+</body>
+</html>
