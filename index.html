@@ -33,13 +33,8 @@
     letter-spacing: -0.02em;
   }
 
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 60px 30px;
-  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 60px 30px; }
 
-  /* HERO */
   .hero {
     background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
     padding: 100px 30px 80px;
@@ -47,72 +42,23 @@
     border-bottom: 4px solid var(--orange);
   }
   .hero-tag {
-    display: inline-block;
-    background: var(--orange);
-    color: var(--blue-dark);
-    padding: 6px 18px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    margin-bottom: 24px;
+    display: inline-block; background: var(--orange); color: var(--blue-dark);
+    padding: 6px 18px; border-radius: 20px; font-weight: 700; font-size: 12px;
+    letter-spacing: 0.1em; margin-bottom: 24px;
   }
-  .hero h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    margin-bottom: 16px;
-    color: white;
-  }
-  .hero .subtitle {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    max-width: 700px;
-    margin: 0 auto 8px;
-  }
-  .hero .meta {
-    color: var(--orange-light);
-    font-size: 0.85rem;
-    margin-top: 16px;
-  }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 16px; color: white; }
+  .hero .subtitle { font-size: 1.1rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 8px; }
+  .hero .meta { color: var(--orange-light); font-size: 0.85rem; margin-top: 16px; }
 
-  /* SECTION HEADERS */
-  section {
-    padding: 60px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .section-num {
-    color: var(--orange);
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 0.15em;
-    margin-bottom: 12px;
-  }
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 24px;
-    color: white;
-  }
-  h3 {
-    font-size: 1.3rem;
-    margin: 32px 0 16px;
-    color: var(--orange-light);
-  }
-  h4 {
-    font-size: 1.05rem;
-    margin: 20px 0 10px;
-    color: white;
-  }
-
+  section { padding: 60px 0; border-bottom: 1px solid var(--border); }
+  .section-num { color: var(--orange); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.15em; margin-bottom: 12px; }
+  h2 { font-size: 2rem; margin-bottom: 24px; color: white; }
+  h3 { font-size: 1.3rem; margin: 32px 0 16px; color: var(--orange-light); }
+  h4 { font-size: 1.05rem; margin: 20px 0 10px; color: white; }
   p { margin-bottom: 16px; }
   strong { color: white; }
 
-  /* CARDS */
-  .card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 16px;
-  }
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin-bottom: 16px; }
   .card.highlight { border-left: 4px solid var(--orange); }
   .card.blue { border-left: 4px solid var(--blue-light); }
 
@@ -120,257 +66,115 @@
   li { margin-bottom: 6px; }
 
   blockquote {
-    border-left: 4px solid var(--orange);
-    padding: 16px 24px;
-    margin: 20px 0;
-    background: var(--bg-card);
-    font-style: italic;
-    border-radius: 0 8px 8px 0;
+    border-left: 4px solid var(--orange); padding: 16px 24px; margin: 20px 0;
+    background: var(--bg-card); font-style: italic; border-radius: 0 8px 8px 0;
   }
 
-  /* GRID */
-  .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px;
-    margin: 20px 0;
-  }
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-    margin: 20px 0;
-  }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 20px 0; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
 
-  /* COLOR SWATCHES */
-  .swatch {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 8px 0;
-  }
-  .swatch-color {
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
-    border: 2px solid var(--border);
-  }
+  .swatch { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+  .swatch-color { width: 40px; height: 40px; border-radius: 6px; border: 2px solid var(--border); }
 
-  /* TOC */
-  .toc {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 24px;
-    margin: 30px 0;
-  }
+  .toc { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 30px 0; }
   .toc ol { margin-left: 20px; }
   .toc a { color: var(--orange-light); text-decoration: none; }
   .toc a:hover { text-decoration: underline; }
 
-  /* PAGE MOCKUP */
+  /* MOCKUP */
   .mockup-wrapper {
-    background: #0F1729;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    margin: 24px 0;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    background: white; border-radius: 12px; overflow: hidden; margin: 24px 0;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5); border: 1px solid var(--border);
   }
+  .mockup-bar { background: #E8EAF0; padding: 10px 14px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #C5CAD4; }
+  .mockup-dot { width: 11px; height: 11px; border-radius: 50%; }
+  .mockup-dot.r { background: #FF5F57; } .mockup-dot.y { background: #FEBC2E; } .mockup-dot.g { background: #28C840; }
+  .mockup-url { flex: 1; background: white; border-radius: 4px; padding: 4px 12px; font-size: 0.7rem; color: #6A7280; margin-left: 8px; font-family: monospace; }
 
-  .mockup-bar {
-    background: #1A2333;
-    padding: 10px 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-bottom: 1px solid var(--border);
-  }
-  .mockup-dot {
-    width: 11px; height: 11px; border-radius: 50%;
-  }
-  .mockup-dot.r { background: #FF5F57; }
-  .mockup-dot.y { background: #FEBC2E; }
-  .mockup-dot.g { background: #28C840; }
-  .mockup-url {
-    flex: 1;
-    background: #0A0F1C;
-    border-radius: 4px;
-    padding: 4px 12px;
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    margin-left: 8px;
-    font-family: monospace;
-  }
+  .mock-nav { background: var(--blue-dark); padding: 16px 32px; display: flex; justify-content: space-between; align-items: center; }
+  .mock-logo { font-weight: 900; color: white; font-size: 0.95rem; letter-spacing: -0.02em; }
+  .mock-nav-links { display: flex; gap: 22px; color: rgba(255,255,255,0.7); font-size: 0.78rem; font-weight: 500; }
+  .mock-nav-cta { background: var(--orange); color: var(--blue-dark); padding: 8px 18px; border-radius: 4px; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.02em; }
 
-  .mock-nav {
-    background: var(--blue-dark);
-    padding: 14px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid var(--orange);
-  }
-  .mock-logo {
-    font-weight: 900;
-    color: white;
-    font-size: 0.9rem;
-  }
-  .mock-nav-links {
-    display: flex;
-    gap: 18px;
-    color: var(--text-muted);
-    font-size: 0.75rem;
-  }
-  .mock-nav-cta {
-    background: var(--orange);
-    color: var(--blue-dark);
-    padding: 6px 14px;
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 0.7rem;
-  }
+  .mock-hero { position: relative; background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%); padding: 70px 40px; text-align: center; overflow: hidden; }
+  .mock-hero::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: linear-gradient(135deg, rgba(2,61,105,0.3) 0%, rgba(249,135,11,0.15) 100%); opacity: 0.6; }
+  .mock-hero > * { position: relative; z-index: 1; }
+  .mock-hero-tag { display: inline-block; color: var(--orange); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.18em; margin-bottom: 16px; }
+  .mock-hero-title { color: white; font-size: 1.8rem; font-weight: 900; margin-bottom: 14px; line-height: 1.15; letter-spacing: -0.02em; }
+  .mock-hero-sub { color: rgba(255,255,255,0.75); font-size: 0.95rem; max-width: 540px; margin: 0 auto 22px; line-height: 1.5; }
+  .mock-cta { display: inline-block; background: var(--orange); color: var(--blue-dark); padding: 12px 26px; border-radius: 4px; font-weight: 800; font-size: 0.85rem; }
 
-  .mock-hero {
-    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
-    padding: 50px 30px;
-    text-align: center;
-  }
-  .mock-hero-tag {
-    display: inline-block;
-    color: var(--orange);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    margin-bottom: 12px;
-  }
-  .mock-hero-title {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 900;
-    margin-bottom: 10px;
-    line-height: 1.2;
-  }
-  .mock-hero-sub {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    max-width: 480px;
-    margin: 0 auto 18px;
-  }
-  .mock-cta {
-    display: inline-block;
-    background: var(--orange);
-    color: var(--blue-dark);
-    padding: 9px 20px;
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 0.78rem;
-  }
+  .mock-section-light { background: white; padding: 40px 40px; color: #1A2333; }
+  .mock-section-light h5 { color: var(--blue-dark); font-size: 1.3rem; font-weight: 900; margin-bottom: 12px; letter-spacing: -0.02em; }
+  .mock-section-light p { color: #4A5568; font-size: 0.92rem; margin-bottom: 0; line-height: 1.6; }
+  .mock-section-light .mock-section-tag { color: var(--orange); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.18em; margin-bottom: 8px; display: block; }
 
-  .mock-section {
-    padding: 28px 30px;
-    border-bottom: 1px solid var(--border);
-  }
-  .mock-section:last-child { border-bottom: none; }
-  .mock-section-tag {
-    display: inline-block;
-    color: var(--orange);
-    font-size: 0.6rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    margin-bottom: 6px;
-  }
-  .mock-section h5 {
-    color: white;
-    font-size: 1rem;
-    margin-bottom: 8px;
-    font-weight: 800;
-  }
-  .mock-section p {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    margin-bottom: 0;
-  }
+  .mock-section-dark { background: var(--blue-dark); padding: 40px 40px; color: white; }
+  .mock-section-dark h5 { color: white; font-size: 1.3rem; font-weight: 900; margin-bottom: 12px; letter-spacing: -0.02em; }
+  .mock-section-dark p { color: rgba(255,255,255,0.75); font-size: 0.92rem; margin-bottom: 0; line-height: 1.6; }
+  .mock-section-dark .mock-section-tag { color: var(--orange); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.18em; margin-bottom: 8px; display: block; }
 
-  .mock-grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-top: 12px;
-  }
-  .mock-grid-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8px;
-    margin-top: 12px;
-  }
-  .mock-card {
-    background: var(--bg-card);
-    border-radius: 4px;
-    padding: 10px;
-    border-left: 2px solid var(--blue-light);
-  }
-  .mock-card strong {
-    font-size: 0.72rem;
-    color: white;
-    display: block;
-    margin-bottom: 3px;
-  }
-  .mock-card span {
-    font-size: 0.68rem;
-    color: var(--text-muted);
-  }
+  .mock-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+  .mock-pillars.three { grid-template-columns: 1fr 1fr 1fr; }
+  .mock-pillar { background: rgba(2,61,105,0.04); border: 1px solid rgba(2,61,105,0.1); border-left: 3px solid var(--orange); border-radius: 6px; padding: 16px; }
+  .mock-section-dark .mock-pillar { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); }
+  .mock-pillar-icon { width: 30px; height: 30px; background: var(--orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.75rem; margin-bottom: 8px; }
+  .mock-pillar strong { display: block; font-size: 0.85rem; color: var(--blue-dark); margin-bottom: 4px; font-weight: 800; }
+  .mock-section-dark .mock-pillar strong { color: white; }
+  .mock-pillar span { font-size: 0.72rem; color: #6A7280; line-height: 1.4; }
+  .mock-section-dark .mock-pillar span { color: rgba(255,255,255,0.65); }
 
-  /* COPY ANNOTATION */
-  .copy-detail {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--orange);
-    border-radius: 8px;
-    padding: 20px 24px;
-    margin: 20px 0;
-  }
-  .copy-detail-tag {
-    display: inline-block;
-    background: var(--orange);
-    color: var(--blue-dark);
-    padding: 3px 10px;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    margin-bottom: 10px;
-  }
-  .copy-detail h5 {
-    color: white;
-    font-size: 1.05rem;
-    margin-bottom: 8px;
-  }
-  .copy-detail p {
-    color: var(--text);
-    font-size: 0.92rem;
-    margin-bottom: 8px;
-    line-height: 1.55;
-  }
-  .copy-detail p.italic { font-style: italic; color: var(--text-muted); }
-  .copy-detail .label {
-    color: var(--orange-light);
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-top: 12px;
-    margin-bottom: 4px;
-  }
+  .mock-journey { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0; margin-top: 20px; position: relative; }
+  .mock-journey::before { content: ''; position: absolute; top: 18px; left: 12.5%; right: 12.5%; height: 2px; background: var(--orange); z-index: 0; }
+  .mock-step { text-align: center; position: relative; z-index: 1; padding: 0 8px; }
+  .mock-step-num { width: 38px; height: 38px; background: var(--orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1rem; margin: 0 auto 10px; border: 3px solid white; }
+  .mock-section-dark .mock-step-num { border-color: var(--blue-dark); }
+  .mock-step strong { display: block; font-size: 0.78rem; margin-bottom: 4px; font-weight: 800; color: var(--blue-dark); }
+  .mock-section-dark .mock-step strong { color: white; }
+  .mock-step span { font-size: 0.68rem; color: #6A7280; }
+  .mock-section-dark .mock-step span { color: rgba(255,255,255,0.6); }
 
-  /* FOOTER */
-  footer {
-    background: var(--blue-dark);
-    padding: 40px 30px;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-  }
+  .mock-founder { display: flex; gap: 24px; align-items: center; }
+  .mock-founder-photo { width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%); flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 1.6rem; border: 3px solid var(--orange); }
+  .mock-founder-content { flex: 1; }
+  .mock-founder-content blockquote { background: transparent; border: none; border-left: 3px solid var(--orange); padding: 4px 16px; margin: 8px 0 0; font-size: 0.88rem; font-style: italic; color: #4A5568; border-radius: 0; }
+  .mock-section-dark .mock-founder-content blockquote { color: rgba(255,255,255,0.8); }
+  .mock-founder-content .name { font-size: 0.78rem; color: var(--orange); font-weight: 700; margin-top: 6px; }
+
+  .mock-testimonials { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 18px; }
+  .mock-testimonial { background: rgba(2,61,105,0.04); border: 1px solid rgba(2,61,105,0.1); border-radius: 8px; padding: 16px; }
+  .mock-section-dark .mock-testimonial { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); }
+  .mock-test-avatar { width: 36px; height: 36px; background: linear-gradient(135deg, var(--blue) 0%, var(--orange) 100%); border-radius: 50%; margin-bottom: 10px; }
+  .mock-testimonial p { font-size: 0.78rem; line-height: 1.5; color: #4A5568; margin-bottom: 10px; font-style: italic; }
+  .mock-section-dark .mock-testimonial p { color: rgba(255,255,255,0.75); }
+  .mock-testimonial .author { font-size: 0.7rem; color: var(--blue); font-weight: 700; font-style: normal; }
+  .mock-section-dark .mock-testimonial .author { color: var(--orange-light); }
+
+  .mock-section-cta { background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%); padding: 60px 40px; text-align: center; color: white; position: relative; overflow: hidden; }
+  .mock-section-cta::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--orange); }
+  .mock-section-cta h5 { color: white; font-size: 1.5rem; font-weight: 900; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.02em; }
+  .mock-section-cta p { color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 20px; }
+
+  .mock-posts { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 16px; }
+  .mock-post { background: white; border: 1px solid #E0E4EC; border-radius: 8px; overflow: hidden; }
+  .mock-section-dark .mock-post { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); }
+  .mock-post-image { height: 80px; background: linear-gradient(135deg, var(--blue-light) 0%, var(--orange) 100%); opacity: 0.6; }
+  .mock-post-body { padding: 12px; }
+  .mock-post-cat { font-size: 0.62rem; color: var(--orange); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+  .mock-post strong { display: block; font-size: 0.78rem; color: var(--blue-dark); line-height: 1.3; }
+  .mock-section-dark .mock-post strong { color: white; }
+
+  .mock-form { background: rgba(2,61,105,0.03); border: 1px solid rgba(2,61,105,0.1); border-radius: 8px; padding: 20px; margin-top: 14px; }
+  .mock-form-field { background: white; border: 1px solid #C5CAD4; border-radius: 4px; padding: 10px 12px; font-size: 0.78rem; color: #6A7280; margin-bottom: 10px; }
+  .mock-form-button { background: var(--orange); color: var(--blue-dark); padding: 11px 22px; border-radius: 4px; font-weight: 800; font-size: 0.82rem; display: inline-block; margin-top: 6px; }
+
+  .copy-detail { background: var(--bg-card); border: 1px solid var(--border); border-left: 4px solid var(--orange); border-radius: 8px; padding: 22px 26px; margin: 18px 0; }
+  .copy-detail-tag { display: inline-block; background: var(--orange); color: var(--blue-dark); padding: 3px 10px; border-radius: 10px; font-weight: 700; font-size: 10px; letter-spacing: 0.1em; margin-bottom: 12px; }
+  .copy-detail h5 { color: white; font-size: 1.1rem; margin-bottom: 10px; }
+  .copy-detail p { color: var(--text); font-size: 0.95rem; margin-bottom: 10px; line-height: 1.6; }
+  .copy-detail .label { color: var(--orange-light); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 14px; margin-bottom: 4px; }
+
+  footer { background: var(--blue-dark); padding: 40px 30px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
 </style>
 </head>
 <body>
@@ -384,7 +188,6 @@
 
 <div class="container">
 
-<!-- TOC -->
 <div class="toc">
   <h3 style="margin-top:0;color:var(--orange-light);">Contents</h3>
   <ol>
@@ -400,23 +203,18 @@
   </ol>
 </div>
 
-<!-- 1: VOICE -->
 <section id="voice">
   <div class="section-num">01 · POSITIONING</div>
   <h2>Brand Voice & Positioning</h2>
-
   <blockquote>"What if they're not people leaving unlawful lifestyles... but entrepreneurs?"</blockquote>
   <blockquote>"Most systems try to fix behavior. That's not the problem. The behavior isn't the issue. It's where it's being applied."</blockquote>
-
-  <p>Every page is built around one idea: <strong>your audience already has what it takes</strong>. The drive, the instinct, the willingness to do hard things — they've already proven it. What they need isn't a new identity. It's a new field to apply who they already are.</p>
-
-  <p>That single shift changes everything about how the site sounds:</p>
+  <p>The whole site is built around one shift: <strong>your audience already knows how to run something</strong>. They've taken risks, managed people, moved money under pressure. The system wasn't the problem with what they did. The law was.</p>
+  <p>That single move changes how the site sounds. Not "we'll help you become a better person" — the goal isn't a different person, it's the same person doing legal work. The voice should be:</p>
   <ul>
-    <li><strong>Empowering, not corrective</strong> — participants don't need to be "fixed"</li>
-    <li><strong>Direct, not soft</strong> — no euphemisms, no pity, no charity language</li>
-    <li><strong>Entrepreneurial, not therapeutic</strong> — speaks to ambition, not recovery</li>
+    <li><strong>Direct.</strong> No charity language. No "journey of healing." Talk to them like adults who already know how the world works.</li>
+    <li><strong>Honest.</strong> Don't oversell. Don't promise. Don't motivate.</li>
+    <li><strong>Specific.</strong> Use real verbs. "Ran something," "moved money," "managed people" — not "redirect their drive."</li>
   </ul>
-
   <h3>Trademarked Terms</h3>
   <div class="grid-3">
     <div class="card highlight"><strong>Unlawful Entrepreneurship™</strong></div>
@@ -425,11 +223,9 @@
   </div>
 </section>
 
-<!-- 2: VISUAL -->
 <section id="visual">
   <div class="section-num">02 · VISUAL DIRECTION</div>
   <h2>Visual Direction</h2>
-
   <div class="grid-2">
     <div class="card">
       <h4>Color Palette</h4>
@@ -442,15 +238,12 @@
       <p><strong>Body:</strong> Tahoma or Aptos</p>
     </div>
   </div>
-
-  <p>Real people. Modern office settings. <strong>No "second chance" clichés</strong> — no broken chains, no sunrise photos, no hands reaching out. The visual tone matches the brand voice: serious, professional, forward-looking.</p>
+  <p>Real people. Real settings. <strong>No "second chance" stock imagery</strong> — no broken chains, no sunrise photos, no hands reaching out. Photos of actual participants and mentors when possible. The visual tone matches the voice: serious, professional, no theatrics.</p>
 </section>
 
-<!-- 3: ARCHITECTURE -->
 <section id="architecture">
   <div class="section-num">03 · SITE ARCHITECTURE</div>
   <h2>Site Architecture</h2>
-
   <div class="grid-2">
     <div class="card highlight">
       <h4>5 Pages</h4>
@@ -463,22 +256,19 @@
       </ol>
     </div>
     <div class="card blue">
-      <h4>Primary CTA Across All Pages</h4>
+      <h4>Primary CTA</h4>
       <p style="margin-top:8px;"><strong>"Register for the Info Session"</strong></p>
-      <p style="font-size:0.9rem;">Every page funnels here. The info session is the entry point — no pressure, no commitment, just an honest look at how the model works.</p>
+      <p style="font-size:0.9rem;">Every page funnels here. The info session is the entry point — no commitment, no pressure, just a real look at what the program is.</p>
     </div>
   </div>
-
   <p><strong>Domain:</strong> 2ndChanceEntrepreneurs.com</p>
 </section>
 
-<!-- 4: HOME PAGE -->
 <section id="home">
   <div class="section-num">04 · HOME PAGE</div>
   <h2>Home Page</h2>
-  <p>The home page does the heavy lifting. Below is the wireframe and the proposed copy for each section.</p>
+  <p>The home page does the heavy lifting. Below is the visual mockup followed by the proposed copy for each section.</p>
 
-  <!-- HOME MOCKUP -->
   <div class="mockup-wrapper">
     <div class="mockup-bar">
       <div class="mockup-dot r"></div><div class="mockup-dot y"></div><div class="mockup-dot g"></div>
@@ -492,55 +282,64 @@
     <div class="mock-hero">
       <div class="mock-hero-tag">A NEW KIND OF SECOND CHANCE</div>
       <div class="mock-hero-title">What if they're not people leaving unlawful lifestyles...<br>but entrepreneurs?</div>
-      <div class="mock-hero-sub">Mentorship, education, and infrastructure to redirect your drive into Lawful Entrepreneurship™.</div>
+      <div class="mock-hero-sub">You already know how to build a business. We help you build one you don't have to hide.</div>
       <div class="mock-cta">Register for the Info Session →</div>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">THE PROBLEM</div>
+    <div class="mock-section-light">
+      <span class="mock-section-tag">THE PROBLEM</span>
       <h5>Most systems try to fix behavior. That's not the problem.</h5>
-      <p>The behavior isn't the issue. It's where it's being applied.</p>
+      <p>You didn't lose your skills when you got caught. You ran something. You managed people. You moved money. The skills don't change. The market does.</p>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">THE SOLUTION</div>
-      <h5>Lawful Entrepreneurship™ — built for who they already are.</h5>
-      <p>2nd Chance Entrepreneurs™ equips men and women with a history of Unlawful Entrepreneurship™ to build legal businesses that fit their skills.</p>
+    <div class="mock-section-dark">
+      <span class="mock-section-tag">THE SOLUTION</span>
+      <h5>We're not asking you to start over.</h5>
+      <p>A nonprofit for people who've already proven they can run something — and now want to run something legal.</p>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">WHAT YOU GET</div>
-      <h5>Four pillars of support.</h5>
-      <div class="mock-grid-2">
-        <div class="mock-card"><strong>1-on-1 Mentorship</strong><span>Real entrepreneurs</span></div>
-        <div class="mock-card"><strong>Education</strong><span>Practical curriculum</span></div>
-        <div class="mock-card"><strong>Infrastructure</strong><span>Legal, brand, ops</span></div>
-        <div class="mock-card"><strong>Peer Community</strong><span>Walking the same path</span></div>
+    <div class="mock-section-light">
+      <span class="mock-section-tag">WHAT YOU GET</span>
+      <h5>What you actually get.</h5>
+      <div class="mock-pillars">
+        <div class="mock-pillar"><div class="mock-pillar-icon">M</div><strong>Mentorship</strong><span>1-on-1 with someone who's built something legal</span></div>
+        <div class="mock-pillar"><div class="mock-pillar-icon">C</div><strong>Curriculum</strong><span>Six modules. Doing the work, not theory.</span></div>
+        <div class="mock-pillar"><div class="mock-pillar-icon">I</div><strong>Infrastructure</strong><span>LLC, banking, website, the basics — handled</span></div>
+        <div class="mock-pillar"><div class="mock-pillar-icon">P</div><strong>People</strong><span>Others walking the same path</span></div>
       </div>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">SOCIAL PROOF</div>
-      <h5>Real stories. Real businesses. Real second chances.</h5>
-      <div class="mock-grid-3">
-        <div class="mock-card"><strong>"Quote..."</strong><span>— Name, Business</span></div>
-        <div class="mock-card"><strong>"Quote..."</strong><span>— Name, Business</span></div>
-        <div class="mock-card"><strong>"Quote..."</strong><span>— Name, Business</span></div>
+    <div class="mock-section-dark">
+      <span class="mock-section-tag">REAL STORIES</span>
+      <h5>Real names. Real businesses.</h5>
+      <div class="mock-testimonials">
+        <div class="mock-testimonial"><div class="mock-test-avatar"></div><p>"Quote from a graduate goes here..."</p><div class="author">— Name, Business</div></div>
+        <div class="mock-testimonial"><div class="mock-test-avatar"></div><p>"Quote from a graduate goes here..."</p><div class="author">— Name, Business</div></div>
+        <div class="mock-testimonial"><div class="mock-test-avatar"></div><p>"Quote from a graduate goes here..."</p><div class="author">— Name, Business</div></div>
       </div>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">FOUNDER</div>
-      <h5>Founded by someone who's seen it from every angle.</h5>
-      <p>Bruce "Captain" Kirk · 2nd Chance Entrepreneurs™ Founder</p>
-    </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">THE PATH</div>
-      <h5>Here's what the journey looks like.</h5>
-      <div class="mock-grid-3">
-        <div class="mock-card"><strong>1 · Info Session</strong><span>Free, no commitment</span></div>
-        <div class="mock-card"><strong>2 · Apply</strong><span>Tell us your story</span></div>
-        <div class="mock-card"><strong>3 · Get Matched</strong><span>Mentor + curriculum</span></div>
+    <div class="mock-section-light">
+      <span class="mock-section-tag">FOUNDER</span>
+      <div class="mock-founder">
+        <div class="mock-founder-photo">BK</div>
+        <div class="mock-founder-content">
+          <h5 style="margin-bottom:6px;">The person behind this.</h5>
+          <p style="margin-bottom:0;">Bruce "Captain" Kirk · 2nd Chance Entrepreneurs™ Founder</p>
+          <blockquote>"I built this because the talent is there. The drive is there. What's missing is somewhere to put it that doesn't put people back in the system."</blockquote>
+          <div class="name">— Bruce Kirk</div>
+        </div>
       </div>
     </div>
-    <div class="mock-section" style="background:linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);text-align:center;">
-      <h5 style="margin-bottom:10px;">You're not starting over. You're starting in the right place.</h5>
-      <div class="mock-cta" style="margin-top:10px;">Register for the Info Session →</div>
+    <div class="mock-section-dark">
+      <span class="mock-section-tag">HOW IT WORKS</span>
+      <h5 style="margin-bottom:18px;">Four steps. No mystery.</h5>
+      <div class="mock-journey">
+        <div class="mock-step"><div class="mock-step-num">1</div><strong>Info Session</strong><span>Free walkthrough</span></div>
+        <div class="mock-step"><div class="mock-step-num">2</div><strong>Apply</strong><span>Tell us your story</span></div>
+        <div class="mock-step"><div class="mock-step-num">3</div><strong>Match</strong><span>Mentor + curriculum</span></div>
+        <div class="mock-step"><div class="mock-step-num">4</div><strong>Launch</strong><span>Real business</span></div>
+      </div>
+    </div>
+    <div class="mock-section-cta">
+      <h5>You're not starting over.<br>You're putting your skills somewhere they belong.</h5>
+      <p>Come to the info session. See if it's a fit. No commitment.</p>
+      <div class="mock-cta">Register for the Info Session →</div>
     </div>
   </div>
 
@@ -551,61 +350,77 @@
     <p class="label">Headline</p>
     <p>What if they're not people leaving unlawful lifestyles... but entrepreneurs?</p>
     <p class="label">Subhead</p>
-    <p>A new kind of second chance — for men and women ready to redirect their drive into Lawful Entrepreneurship™.</p>
+    <p>You already know how to build a business. We help you build one you don't have to hide.</p>
   </div>
 
   <div class="copy-detail">
     <span class="copy-detail-tag">THE PROBLEM</span>
     <h5>Most systems try to fix behavior. That's not the problem.</h5>
-    <p>The system tells them to start over. To be a different person. To take entry-level jobs that don't fit who they are.</p>
-    <p>But the behavior isn't the issue. It's where it's being applied.</p>
-    <p>People with a history of Unlawful Entrepreneurship™ already know how to build, lead, sell, take risks, and survive. They don't need to be fixed. They need a new field to apply what they already know — legally.</p>
+    <p>Most reentry programs hand you a name tag and tell you to forget what you know.</p>
+    <p>But you didn't lose your skills when you got caught. You ran something. You managed people. You moved money. You took risks most people wouldn't touch. The system wasn't the problem with what you did — the law was.</p>
+    <p>The skills don't change. The market does.</p>
   </div>
 
   <div class="copy-detail">
     <span class="copy-detail-tag">THE SOLUTION</span>
-    <h5>Lawful Entrepreneurship™ — built for who they already are.</h5>
-    <p>2nd Chance Entrepreneurs™ is a nonprofit that equips men and women with a history of Unlawful Entrepreneurship™ — those tired of that lifestyle and ready for something different — with the mentorship, education, and infrastructure to build legal businesses that actually fit their skills and ambition.</p>
+    <h5>We're not asking you to start over.</h5>
+    <p>2nd Chance Entrepreneurs™ is a nonprofit for people who've already proven they can run something — and now want to run something legal.</p>
+    <p>You get a mentor, a curriculum that's about doing the work (not theory), and a community of people who've been there. The goal isn't a certificate. It's a registered, lawful business with your name on it.</p>
   </div>
 
   <div class="copy-detail">
-    <span class="copy-detail-tag">THE PATH</span>
-    <h5>Here's what the journey looks like.</h5>
+    <span class="copy-detail-tag">WHAT YOU GET</span>
+    <h5>What you actually get.</h5>
+    <p><strong>Mentorship</strong> — A 1-on-1 coach who's built something legal and knows what it actually takes.</p>
+    <p><strong>Curriculum</strong> — Six modules covering the stuff you actually need: legal setup, money, marketing, ops.</p>
+    <p><strong>Infrastructure</strong> — We help with the LLC, the bank account, the website. The basics no one else walks you through.</p>
+    <p><strong>Community</strong> — A room full of people walking the same path.</p>
+  </div>
+
+  <div class="copy-detail">
+    <span class="copy-detail-tag">FOUNDER</span>
+    <h5>The person behind this.</h5>
+    <p>Bruce "Captain" Kirk has spent years working with founders, building businesses, and watching the system fail people who had every quality of a great entrepreneur — except a legal way to use it.</p>
+    <p>He started 2nd Chance Entrepreneurs™ because he was tired of waiting for someone else to.</p>
+  </div>
+
+  <div class="copy-detail">
+    <span class="copy-detail-tag">HOW IT WORKS</span>
+    <h5>Four steps. No mystery.</h5>
     <ol style="margin-top:8px;">
-      <li><strong>Attend the Info Session</strong> — Free, no commitment.</li>
-      <li><strong>Apply to the Program</strong> — Tell us your story and where you want to go.</li>
-      <li><strong>Get Matched</strong> — A mentor and curriculum that fit you.</li>
-      <li><strong>Launch Your Business</strong> — Real business. Real customers. Real income — legally.</li>
+      <li><strong>Info Session</strong> — A free, no-pressure walk-through of how the program works. Nothing to sign.</li>
+      <li><strong>Apply</strong> — A short application. We want to know what you've done and where you're trying to go.</li>
+      <li><strong>Match + Start</strong> — We pair you with a mentor and the curriculum that fits where you are.</li>
+      <li><strong>Launch</strong> — A registered business. Customers. Money in a real bank account.</li>
     </ol>
   </div>
 
   <div class="copy-detail">
     <span class="copy-detail-tag">WHO IT'S FOR</span>
-    <h5>This isn't for everyone.</h5>
-    <p>If you're looking for a shortcut, a handout, or someone to do the work for you — this isn't it.</p>
-    <p>This is for the ones ready to apply real effort, follow real systems, and build something real. The result is yours to keep — but so is the work.</p>
+    <h5>This isn't a course. It isn't easy. And it isn't for everyone.</h5>
+    <p>What you get: a mentor who's built something legal, a curriculum that skips the fluff, weekly meetings that actually move things forward, and a community that gets where you're coming from.</p>
+    <p>You bring the work. We bring everything else.</p>
   </div>
 
   <div class="copy-detail">
     <span class="copy-detail-tag">OUR COMMITMENT</span>
     <h5>What we promise — and what we don't.</h5>
-    <p>We don't promise success. Anyone who promises success is selling you something.</p>
-    <p>What we promise: to show up, do the work alongside you, and provide every tool we have. If you bring the effort, we bring the system.</p>
+    <p>We won't promise you success. Anyone who promises that is selling something.</p>
+    <p>Here's what we will promise: we show up. We work next to you, not at you. Anything we know, we'll teach. And we don't quit on you when it gets hard.</p>
   </div>
 
   <div class="copy-detail">
     <span class="copy-detail-tag">CLOSE</span>
-    <h5>You're not starting over. You're starting in the right place.</h5>
-    <p>You already have what it takes. The drive. The instinct. The willingness to do hard things. We're here to help you channel it.</p>
+    <h5>You're not starting over.</h5>
+    <p>You already know how to do this. You just need to do it on the right side of the line.</p>
+    <p>Come to the info session. See if it's a fit. No commitment.</p>
   </div>
 </section>
 
-<!-- 5: ABOUT -->
 <section id="about">
   <div class="section-num">05 · ABOUT PAGE</div>
   <h2>About Page</h2>
 
-  <!-- ABOUT MOCKUP -->
   <div class="mockup-wrapper">
     <div class="mockup-bar">
       <div class="mockup-dot r"></div><div class="mockup-dot y"></div><div class="mockup-dot g"></div>
@@ -616,34 +431,37 @@
       <div class="mock-nav-links"><span>Home</span><span style="color:var(--orange);">About</span><span>Services</span><span>Blog</span><span>Contact</span></div>
       <div class="mock-nav-cta">Register</div>
     </div>
-    <div class="mock-hero" style="padding:40px 30px;">
+    <div class="mock-hero" style="padding:50px 40px;">
       <div class="mock-hero-title">A new model for second chances.</div>
-      <div class="mock-hero-sub">Built by people who understand — for people ready to build something different.</div>
+      <div class="mock-hero-sub">For people who already know how to run something. They just need to run something legal.</div>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">WHY THIS EXISTS</div>
-      <h5>Traditional reentry programs treat people like they need to be fixed. They don't.</h5>
-      <p>They need to be redirected.</p>
+    <div class="mock-section-light">
+      <span class="mock-section-tag">WHY THIS EXISTS</span>
+      <h5>The skills are real. They just got pointed in the wrong direction.</h5>
+      <p>Most people coming out of unlawful lives have already done the hardest parts of being an entrepreneur. The system thinks they need to be fixed. They don't. They need somewhere to put what they already know.</p>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">MISSION</div>
-      <h5>Equipping men and women with the tools to redirect their energies into Lawful Entrepreneurship™.</h5>
-    </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">FOUNDER</div>
-      <h5>Meet Bruce Kirk.</h5>
-      <p>"I built this because the talent is there. The drive is there. What's missing is somewhere to apply it."</p>
-    </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">VALUES</div>
-      <div class="mock-grid-2">
-        <div class="mock-card"><strong>Redirect, not fix</strong></div>
-        <div class="mock-card"><strong>Meet you where you are</strong></div>
-        <div class="mock-card"><strong>Real businesses, not certificates</strong></div>
-        <div class="mock-card"><strong>Treat you like an entrepreneur</strong></div>
+    <div class="mock-section-dark">
+      <span class="mock-section-tag">FOUNDER</span>
+      <div class="mock-founder">
+        <div class="mock-founder-photo">BK</div>
+        <div class="mock-founder-content">
+          <h5 style="margin-bottom:6px;color:white;">Meet Bruce Kirk.</h5>
+          <p style="margin-bottom:0;">Founder · 2nd Chance Entrepreneurs™</p>
+          <blockquote style="color:rgba(255,255,255,0.85);">"I built this because the talent is there. The drive is there. What's missing is somewhere to put it that doesn't put people back in the system."</blockquote>
+        </div>
       </div>
     </div>
-    <div class="mock-section" style="background:linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);text-align:center;">
+    <div class="mock-section-light">
+      <span class="mock-section-tag">WHAT WE BELIEVE</span>
+      <div class="mock-pillars">
+        <div class="mock-pillar"><strong>The skills are real.</strong><span>They just need a legal place to live.</span></div>
+        <div class="mock-pillar"><strong>No pretending.</strong><span>We meet you where you are.</span></div>
+        <div class="mock-pillar"><strong>Real businesses, not certificates.</strong><span>Success = revenue, not graduations.</span></div>
+        <div class="mock-pillar"><strong>You're an entrepreneur.</strong><span>Not a project. Not a case.</span></div>
+      </div>
+    </div>
+    <div class="mock-section-cta">
+      <h5>Want to see how the program works?</h5>
       <div class="mock-cta">Register for the Info Session →</div>
     </div>
   </div>
@@ -651,40 +469,51 @@
   <h3>Proposed Copy</h3>
 
   <div class="copy-detail">
+    <span class="copy-detail-tag">HERO</span>
+    <p class="label">Headline</p>
+    <p>A new model for second chances.</p>
+    <p class="label">Subhead</p>
+    <p>For people who already know how to run something. They just need to run something legal.</p>
+  </div>
+
+  <div class="copy-detail">
     <span class="copy-detail-tag">WHY THIS EXISTS</span>
-    <p>Traditional reentry programs treat people coming out of unlawful lifestyles like they need to be fixed. They don't.</p>
-    <p>They need to be redirected.</p>
-    <p>Most of them already have the skills that make a great entrepreneur — they've taken risks, led teams, managed money, sold under pressure. The problem was never their capacity. It was where that capacity was being applied.</p>
-    <p>We built 2nd Chance Entrepreneurs™ to give those skills a legal home.</p>
+    <p>The system has a bad habit of treating people coming out of unlawful lives like they need to be fixed.</p>
+    <p>They don't.</p>
+    <p>Most of them have already done the hardest part of being an entrepreneur — taken risks, made decisions under pressure, moved money, led people, built something out of nothing. The skills are real. They just got pointed in the wrong direction.</p>
+    <p>2nd Chance Entrepreneurs™ exists to point them somewhere they can keep.</p>
   </div>
 
   <div class="copy-detail">
     <span class="copy-detail-tag">MISSION</span>
-    <p>To equip men and women with a history of Unlawful Entrepreneurship™ — those sick and tired of that lifestyle — with the mentorship, education, and resources to redirect their energies and passions into Lawful Entrepreneurship™.</p>
+    <p>We help men and women with a history of Unlawful Entrepreneurship™ build legal businesses they can be proud of. Through mentorship, education, and a network of people who've done it before.</p>
   </div>
 
   <div class="copy-detail">
-    <span class="copy-detail-tag">VALUES</span>
-    <ul>
-      <li><strong>We don't fix behavior. We redirect skills.</strong> Our participants aren't broken. They're misapplied.</li>
-      <li><strong>We meet people where they are.</strong> No prerequisites. No pretending. Real conversations.</li>
-      <li><strong>We measure success in launched businesses.</strong> Not certificates. Real revenue.</li>
-      <li><strong>We treat participants like entrepreneurs.</strong> Because that's what they are.</li>
-    </ul>
+    <span class="copy-detail-tag">FOUNDER</span>
+    <h5>Meet Bruce Kirk.</h5>
+    <p><em>[Bruce's full story to be drafted with him.]</em></p>
+    <blockquote>"I built this because the talent is there. The drive is there. What's missing is somewhere to put it that doesn't put people back in the system." — Bruce Kirk, Founder</blockquote>
+  </div>
+
+  <div class="copy-detail">
+    <span class="copy-detail-tag">WHAT WE BELIEVE</span>
+    <p><strong>The skills are real.</strong> They just need a legal place to live.</p>
+    <p><strong>No pretending.</strong> We meet you where you are. No pretending to be someone you're not.</p>
+    <p><strong>Real businesses, not certificates.</strong> Success is measured in revenue, not graduations.</p>
+    <p><strong>You're an entrepreneur, not a project.</strong> That's how we'll treat you.</p>
   </div>
 
   <div class="copy-detail">
     <span class="copy-detail-tag">CLOSE</span>
-    <p>We believe in second chances — but more than that, we believe in second applications of the same drive that got people in trouble in the first place.</p>
+    <p>We believe in second chances. More than that, we believe in second applications of skills that are already there.</p>
   </div>
 </section>
 
-<!-- 6: SERVICES -->
 <section id="services">
   <div class="section-num">06 · SERVICES PAGE</div>
   <h2>Services Page</h2>
 
-  <!-- SERVICES MOCKUP -->
   <div class="mockup-wrapper">
     <div class="mockup-bar">
       <div class="mockup-dot r"></div><div class="mockup-dot y"></div><div class="mockup-dot g"></div>
@@ -695,28 +524,37 @@
       <div class="mock-nav-links"><span>Home</span><span>About</span><span style="color:var(--orange);">Services</span><span>Blog</span><span>Contact</span></div>
       <div class="mock-nav-cta">Register</div>
     </div>
-    <div class="mock-hero" style="padding:40px 30px;">
+    <div class="mock-hero" style="padding:50px 40px;">
       <div class="mock-hero-title">What we provide.</div>
-      <div class="mock-hero-sub">Everything you need to redirect your skills into a real business.</div>
+      <div class="mock-hero-sub">Everything you need to actually start, run, and keep a business — legally.</div>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">THREE PILLARS</div>
-      <div class="mock-grid-3">
-        <div class="mock-card"><strong>Mentorship</strong><span>1-on-1 guidance</span></div>
-        <div class="mock-card"><strong>Education</strong><span>Practical curriculum</span></div>
-        <div class="mock-card"><strong>Community</strong><span>Peer network</span></div>
+    <div class="mock-section-light">
+      <span class="mock-section-tag">THREE PILLARS</span>
+      <div class="mock-pillars three">
+        <div class="mock-pillar"><div class="mock-pillar-icon">1</div><strong>Mentorship</strong><span>One-on-one with someone who's built something</span></div>
+        <div class="mock-pillar"><div class="mock-pillar-icon">2</div><strong>Education</strong><span>Doing the work, not learning about it</span></div>
+        <div class="mock-pillar"><div class="mock-pillar-icon">3</div><strong>Community</strong><span>Same path, same work</span></div>
       </div>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">CURRICULUM</div>
-      <h5>6 modules — from identity to scaling.</h5>
-      <p>Module 1: Who you are as an entrepreneur · Module 2: Legal structure · Module 3: Finding your market · Module 4: Operations · Module 5: Branding & marketing · Module 6: Scaling responsibly</p>
+    <div class="mock-section-dark">
+      <span class="mock-section-tag">CURRICULUM</span>
+      <h5>Six modules. From who you are to how you scale.</h5>
+      <div class="mock-pillars three" style="margin-top:18px;">
+        <div class="mock-pillar"><strong>1. Who You Are</strong><span>What you already bring</span></div>
+        <div class="mock-pillar"><strong>2. The Legal Stuff</strong><span>LLC, EIN, taxes</span></div>
+        <div class="mock-pillar"><strong>3. Your Market</strong><span>Legal version of your skills</span></div>
+        <div class="mock-pillar"><strong>4. Operations</strong><span>Banking, accounting, contracts</span></div>
+        <div class="mock-pillar"><strong>5. Marketing</strong><span>Getting customers</span></div>
+        <div class="mock-pillar"><strong>6. Scaling</strong><span>Growing without breaking</span></div>
+      </div>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">OUTCOMES</div>
-      <h5>By the end, you'll have a registered business, real customers, and a network.</h5>
+    <div class="mock-section-light">
+      <span class="mock-section-tag">OUTCOMES</span>
+      <h5>What you'll have at the end.</h5>
+      <p>A registered business. Customers (or a clear path to them). A real network. The skills to keep going.</p>
     </div>
-    <div class="mock-section" style="background:linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);text-align:center;">
+    <div class="mock-section-cta">
+      <h5>Ready to see if it's a fit?</h5>
       <div class="mock-cta">Register for the Info Session →</div>
     </div>
   </div>
@@ -724,62 +562,67 @@
   <h3>Proposed Copy</h3>
 
   <div class="copy-detail">
+    <span class="copy-detail-tag">HERO</span>
+    <p class="label">Headline</p>
+    <p>What we provide.</p>
+    <p class="label">Subhead</p>
+    <p>Everything you need to actually start, run, and keep a business — legally.</p>
+  </div>
+
+  <div class="copy-detail">
     <span class="copy-detail-tag">THE PROBLEM</span>
-    <h5>Most programs leave you stuck.</h5>
-    <p>They give you a workbook. A motivational speech. A "business plan template." Then they send you home.</p>
-    <p>We don't do that.</p>
+    <h5>Most programs hand you a workbook and call it support.</h5>
+    <p>They give you a template. A motivational speaker. A "business plan canvas." Then they send you home to figure out the actual hard parts alone.</p>
+    <p>We don't work like that.</p>
   </div>
 
   <div class="copy-detail">
     <span class="copy-detail-tag">WHAT'S INCLUDED</span>
     <h5>Mentorship Program</h5>
     <ul>
-      <li>Weekly 1-on-1 sessions with a matched mentor</li>
-      <li>Mentors who've built real businesses (not just consultants)</li>
-      <li>Direct access for questions outside scheduled sessions</li>
-      <li>12-month commitment</li>
+      <li>Weekly 1-on-1 sessions with someone who's built something</li>
+      <li>Direct line for questions between sessions</li>
+      <li>12-month commitment (this isn't a 4-week sprint)</li>
     </ul>
-    <h5 style="margin-top:16px;">Educational Curriculum</h5>
+    <h5 style="margin-top:18px;">Curriculum</h5>
     <ul>
-      <li><strong>Module 1:</strong> Who you are as an entrepreneur (assessment + reframe)</li>
-      <li><strong>Module 2:</strong> Legal business structure (LLC, EIN, tax basics)</li>
-      <li><strong>Module 3:</strong> Finding your market (the legal version of what you already do)</li>
-      <li><strong>Module 4:</strong> Operations (banking, accounting, contracts)</li>
-      <li><strong>Module 5:</strong> Branding & marketing</li>
-      <li><strong>Module 6:</strong> Scaling responsibly</li>
+      <li><strong>Module 1:</strong> Who you are as an entrepreneur — what you already bring</li>
+      <li><strong>Module 2:</strong> The legal stuff (LLC, EIN, taxes — we walk through it)</li>
+      <li><strong>Module 3:</strong> Finding your market — the legal version of what you're good at</li>
+      <li><strong>Module 4:</strong> Operations — banking, accounting, contracts</li>
+      <li><strong>Module 5:</strong> Marketing — getting customers without being salesy</li>
+      <li><strong>Module 6:</strong> Scaling — how to grow without breaking yourself</li>
     </ul>
-    <h5 style="margin-top:16px;">Peer Community</h5>
+    <h5 style="margin-top:18px;">Community</h5>
     <ul>
-      <li>Private group of all current and past participants</li>
+      <li>Private group of every current and past participant</li>
       <li>Monthly group calls</li>
-      <li>Quarterly in-person meetups</li>
-      <li>Resource library and tool access</li>
+      <li>Quarterly meetups (in person)</li>
+      <li>Resources, tools, and templates we've collected</li>
     </ul>
   </div>
 
   <div class="copy-detail">
     <span class="copy-detail-tag">OUTCOMES</span>
-    <h5>By the end of the program, you'll have:</h5>
+    <h5>What you'll have at the end.</h5>
     <ul>
       <li>A registered, lawful business</li>
-      <li>Real customers (or a clear path to them)</li>
+      <li>Customers, or a clear path to them</li>
       <li>A network of mentors and peers</li>
-      <li>The skills to keep growing</li>
+      <li>The skills to keep going</li>
     </ul>
   </div>
 
   <div class="copy-detail">
     <span class="copy-detail-tag">CLOSE</span>
-    <p>We don't take everyone. But for the ones we take — we go all in.</p>
+    <p>We don't take everyone. But the people we take, we don't let drift.</p>
   </div>
 </section>
 
-<!-- 7: BLOG -->
 <section id="blog">
   <div class="section-num">07 · BLOG PAGE</div>
   <h2>Blog Page</h2>
 
-  <!-- BLOG MOCKUP -->
   <div class="mockup-wrapper">
     <div class="mockup-bar">
       <div class="mockup-dot r"></div><div class="mockup-dot y"></div><div class="mockup-dot g"></div>
@@ -790,34 +633,49 @@
       <div class="mock-nav-links"><span>Home</span><span>About</span><span>Services</span><span style="color:var(--orange);">Blog</span><span>Contact</span></div>
       <div class="mock-nav-cta">Register</div>
     </div>
-    <div class="mock-hero" style="padding:40px 30px;">
-      <div class="mock-hero-title">Real stories. Real strategy. Real second chances.</div>
-      <div class="mock-hero-sub">Honest conversations about what it actually takes to redirect your skills into something legal.</div>
+    <div class="mock-hero" style="padding:50px 40px;">
+      <div class="mock-hero-title">Stories. Strategy. Second chances.</div>
+      <div class="mock-hero-sub">Honest writing about what it actually takes to redirect your skills into something legal.</div>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">CATEGORIES</div>
-      <div class="mock-grid-2">
-        <div class="mock-card"><strong>Stories from the Path</strong><span>Graduate journeys</span></div>
-        <div class="mock-card"><strong>Real Talk</strong><span>Founder & mentor essays</span></div>
-        <div class="mock-card"><strong>The Skills You Already Have</strong><span>Reframe content</span></div>
-        <div class="mock-card"><strong>Practical Steps</strong><span>How-tos & guides</span></div>
+    <div class="mock-section-light">
+      <span class="mock-section-tag">CATEGORIES</span>
+      <div class="mock-pillars">
+        <div class="mock-pillar"><strong>Stories from the Path</strong><span>How real participants got from start to launch</span></div>
+        <div class="mock-pillar"><strong>Real Talk</strong><span>Mentors and Bruce on what's hard and what works</span></div>
+        <div class="mock-pillar"><strong>The Skills You Already Have</strong><span>What past experience really translates to</span></div>
+        <div class="mock-pillar"><strong>Practical Steps</strong><span>How-tos on legal setup, marketing, ops</span></div>
       </div>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">FEATURED POSTS</div>
-      <div class="mock-grid-3">
-        <div class="mock-card"><strong>Post Title 1</strong><span>Category · Date</span></div>
-        <div class="mock-card"><strong>Post Title 2</strong><span>Category · Date</span></div>
-        <div class="mock-card"><strong>Post Title 3</strong><span>Category · Date</span></div>
+    <div class="mock-section-light">
+      <span class="mock-section-tag">FEATURED POSTS</span>
+      <div class="mock-posts">
+        <div class="mock-post"><div class="mock-post-image"></div><div class="mock-post-body"><div class="mock-post-cat">Stories</div><strong>Post title goes here, two lines</strong></div></div>
+        <div class="mock-post"><div class="mock-post-image"></div><div class="mock-post-body"><div class="mock-post-cat">Real Talk</div><strong>Post title goes here, two lines</strong></div></div>
+        <div class="mock-post"><div class="mock-post-image"></div><div class="mock-post-body"><div class="mock-post-cat">Practical</div><strong>Post title goes here, two lines</strong></div></div>
       </div>
     </div>
   </div>
 
   <div class="copy-detail">
+    <span class="copy-detail-tag">HERO</span>
+    <p class="label">Headline</p>
+    <p>Stories. Strategy. Second chances.</p>
+    <p class="label">Subhead</p>
+    <p>Honest writing about what it actually takes to redirect your skills into something legal.</p>
+  </div>
+
+  <div class="copy-detail">
     <span class="copy-detail-tag">INTRO COPY</span>
-    <h5>Real stories. Real strategy. Real second chances.</h5>
     <p>This isn't a typical business blog.</p>
-    <p>It's a place for honest conversations about what it actually takes to redirect your skills into something legal — written by people who've done it, are doing it, and want to help others do the same.</p>
+    <p>It's where we put the stuff that doesn't fit on the rest of the site — graduate stories, real talk from mentors, practical how-tos, and the parts of the journey that don't make it onto polished about pages.</p>
+  </div>
+
+  <div class="copy-detail">
+    <span class="copy-detail-tag">CATEGORIES</span>
+    <p><strong>Stories from the Path</strong> — How real participants got from start to launch.</p>
+    <p><strong>Real Talk</strong> — Mentors and Bruce on what's hard, what works, and what doesn't.</p>
+    <p><strong>The Skills You Already Have</strong> — What past experience really translates to.</p>
+    <p><strong>Practical Steps</strong> — How-tos on legal setup, marketing, ops.</p>
   </div>
 
   <div class="copy-detail">
@@ -834,12 +692,10 @@
   </div>
 </section>
 
-<!-- 8: CONTACT -->
 <section id="contact">
   <div class="section-num">08 · CONTACT PAGE</div>
   <h2>Contact Page</h2>
 
-  <!-- CONTACT MOCKUP -->
   <div class="mockup-wrapper">
     <div class="mockup-bar">
       <div class="mockup-dot r"></div><div class="mockup-dot y"></div><div class="mockup-dot g"></div>
@@ -850,29 +706,43 @@
       <div class="mock-nav-links"><span>Home</span><span>About</span><span>Services</span><span>Blog</span><span style="color:var(--orange);">Contact</span></div>
       <div class="mock-nav-cta">Register</div>
     </div>
-    <div class="mock-hero" style="padding:40px 30px;">
+    <div class="mock-hero" style="padding:50px 40px;">
       <div class="mock-hero-title">Let's talk.</div>
-      <div class="mock-hero-sub">Whether you're considering the program or just have questions — we're here.</div>
+      <div class="mock-hero-sub">Whether you're ready to apply or just want to ask questions, we want to hear from you.</div>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">FORM</div>
-      <h5>Contact form</h5>
-      <p>Name · Email · Phone · "What brings you here?" dropdown · Message</p>
+    <div class="mock-section-light">
+      <span class="mock-section-tag">CONTACT FORM</span>
+      <div class="mock-form">
+        <div class="mock-form-field">Name</div>
+        <div class="mock-form-field">Email</div>
+        <div class="mock-form-field">Phone (optional)</div>
+        <div class="mock-form-field">What brings you here? ▾</div>
+        <div class="mock-form-field" style="height:60px;">Message</div>
+        <div class="mock-form-button">Send Message</div>
+      </div>
     </div>
-    <div class="mock-section">
-      <div class="mock-section-tag">DIRECT CONTACT</div>
-      <p>BruceKirk@2ndChanceEntrepreneurs.com · (610) 563-6683 · 19 Greenbriar Rd, Thorndale, PA 19372</p>
+    <div class="mock-section-dark">
+      <span class="mock-section-tag">DIRECT</span>
+      <p style="font-size:0.85rem;">BruceKirk@2ndChanceEntrepreneurs.com<br>(610) 563-6683<br>19 Greenbriar Rd, Thorndale, PA 19372</p>
     </div>
-    <div class="mock-section" style="background:linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);text-align:center;">
+    <div class="mock-section-cta">
+      <h5>Or just register for the info session.</h5>
       <div class="mock-cta">Register for the Info Session →</div>
     </div>
   </div>
 
   <div class="copy-detail">
+    <span class="copy-detail-tag">HERO</span>
+    <p class="label">Headline</p>
+    <p>Let's talk.</p>
+    <p class="label">Subhead</p>
+    <p>Whether you're ready to apply or just want to ask questions, we want to hear from you.</p>
+  </div>
+
+  <div class="copy-detail">
     <span class="copy-detail-tag">INTRO</span>
-    <h5>Let's talk.</h5>
-    <p>Whether you're considering the program or just have questions — we're here.</p>
-    <p>Most people who reach out aren't sure if this is for them. That's okay. The conversation costs nothing.</p>
+    <p>Most people who reach out aren't sure if this is for them. That's okay.</p>
+    <p>Send us a message. The conversation costs nothing.</p>
   </div>
 
   <div class="copy-detail">
@@ -894,25 +764,13 @@
   </div>
 </section>
 
-<!-- 9: FUNNEL -->
 <section id="funnel">
   <div class="section-num">09 · VISITOR JOURNEY</div>
   <h2>How Visitors Move Through the Site</h2>
-  <p>Every page on the site funnels to one place: the info session. From there, the path to the program is clear and friction-free.</p>
-
+  <p>Every page on the site funnels to one place: the info session. From there, the path to the program is clear.</p>
   <div class="card highlight">
     <p style="font-family:monospace;font-size:0.95rem;line-height:1.8;text-align:center;">
-      Any Page<br>
-      ↓<br>
-      <strong>"Register for the Info Session"</strong><br>
-      ↓<br>
-      Registration Form → Confirmation<br>
-      ↓<br>
-      Email Reminders (3 days · 1 day · 3 hours before)<br>
-      ↓<br>
-      <strong>Info Session</strong><br>
-      ↓<br>
-      Application → Program Enrollment
+      Any Page<br>↓<br><strong>"Register for the Info Session"</strong><br>↓<br>Registration Form → Confirmation<br>↓<br>Email Reminders (3 days · 1 day · 3 hours before)<br>↓<br><strong>Info Session</strong><br>↓<br>Application → Program Enrollment
     </p>
   </div>
 </section>
