@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2nd Chance Entrepreneurs™ — Website Strategy v2</title>
+<title>2nd Chance Entrepreneurs™ — Website Strategy</title>
 <style>
   :root {
     --blue: #023D69;
@@ -105,7 +105,7 @@
   p { margin-bottom: 16px; }
   strong { color: white; }
 
-  /* CARDS & TABLES */
+  /* CARDS */
   .card {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -113,36 +113,10 @@
     padding: 24px;
     margin-bottom: 16px;
   }
-  .card.highlight {
-    border-left: 4px solid var(--orange);
-  }
-  .card.blue {
-    border-left: 4px solid var(--blue-light);
-  }
+  .card.highlight { border-left: 4px solid var(--orange); }
+  .card.blue { border-left: 4px solid var(--blue-light); }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    background: var(--bg-card);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  th, td {
-    padding: 12px 16px;
-    text-align: left;
-    border-bottom: 1px solid var(--border);
-  }
-  th {
-    background: var(--blue);
-    color: white;
-    font-weight: 700;
-  }
-  tr:last-child td { border-bottom: none; }
-
-  ul, ol {
-    margin: 12px 0 16px 24px;
-  }
+  ul, ol { margin: 12px 0 16px 24px; }
   li { margin-bottom: 6px; }
 
   blockquote {
@@ -152,62 +126,6 @@
     background: var(--bg-card);
     font-style: italic;
     border-radius: 0 8px 8px 0;
-  }
-
-  /* SECTION CARDS (the 12-section template) */
-  .section-card {
-    background: linear-gradient(135deg, var(--bg-card) 0%, #1A2C4F 100%);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 28px;
-    margin-bottom: 20px;
-    border-left: 4px solid var(--orange);
-  }
-  .section-card .section-tag {
-    display: inline-block;
-    background: var(--orange);
-    color: var(--blue-dark);
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    margin-bottom: 12px;
-  }
-  .section-card h4 {
-    color: white;
-    font-size: 1.25rem;
-    margin-bottom: 12px;
-  }
-  .section-card .copy-block {
-    background: rgba(0,0,0,0.2);
-    border-radius: 6px;
-    padding: 16px;
-    margin-top: 12px;
-    border-left: 3px solid var(--blue-light);
-  }
-  .section-card .copy-label {
-    color: var(--orange-light);
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 8px;
-  }
-  .section-card .copy-text {
-    color: var(--text);
-    font-style: italic;
-  }
-
-  .cta-button {
-    display: inline-block;
-    background: var(--orange);
-    color: var(--blue-dark);
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-weight: 700;
-    margin-top: 12px;
-    text-decoration: none;
   }
 
   /* GRID */
@@ -246,28 +164,203 @@
     padding: 24px;
     margin: 30px 0;
   }
-  .toc ol {
-    margin-left: 20px;
-  }
-  .toc a {
-    color: var(--orange-light);
-    text-decoration: none;
-  }
+  .toc ol { margin-left: 20px; }
+  .toc a { color: var(--orange-light); text-decoration: none; }
   .toc a:hover { text-decoration: underline; }
 
-  /* CHECKLIST */
-  .checklist li {
-    list-style: none;
-    padding-left: 24px;
-    position: relative;
+  /* PAGE MOCKUP */
+  .mockup-wrapper {
+    background: #0F1729;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 24px 0;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  }
+
+  .mockup-bar {
+    background: #1A2333;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .mockup-dot {
+    width: 11px; height: 11px; border-radius: 50%;
+  }
+  .mockup-dot.r { background: #FF5F57; }
+  .mockup-dot.y { background: #FEBC2E; }
+  .mockup-dot.g { background: #28C840; }
+  .mockup-url {
+    flex: 1;
+    background: #0A0F1C;
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-left: 8px;
+    font-family: monospace;
+  }
+
+  .mock-nav {
+    background: var(--blue-dark);
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--orange);
+  }
+  .mock-logo {
+    font-weight: 900;
+    color: white;
+    font-size: 0.9rem;
+  }
+  .mock-nav-links {
+    display: flex;
+    gap: 18px;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+  }
+  .mock-nav-cta {
+    background: var(--orange);
+    color: var(--blue-dark);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.7rem;
+  }
+
+  .mock-hero {
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+    padding: 50px 30px;
+    text-align: center;
+  }
+  .mock-hero-tag {
+    display: inline-block;
+    color: var(--orange);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
+  }
+  .mock-hero-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .mock-hero-sub {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    max-width: 480px;
+    margin: 0 auto 18px;
+  }
+  .mock-cta {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--blue-dark);
+    padding: 9px 20px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.78rem;
+  }
+
+  .mock-section {
+    padding: 28px 30px;
+    border-bottom: 1px solid var(--border);
+  }
+  .mock-section:last-child { border-bottom: none; }
+  .mock-section-tag {
+    display: inline-block;
+    color: var(--orange);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 6px;
+  }
+  .mock-section h5 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: 800;
+  }
+  .mock-section p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+  }
+
+  .mock-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .mock-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .mock-card {
+    background: var(--bg-card);
+    border-radius: 4px;
+    padding: 10px;
+    border-left: 2px solid var(--blue-light);
+  }
+  .mock-card strong {
+    font-size: 0.72rem;
+    color: white;
+    display: block;
+    margin-bottom: 3px;
+  }
+  .mock-card span {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+  }
+
+  /* COPY ANNOTATION */
+  .copy-detail {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+  .copy-detail-tag {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--blue-dark);
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+  .copy-detail h5 {
+    color: white;
+    font-size: 1.05rem;
     margin-bottom: 8px;
   }
-  .checklist li::before {
-    content: '☐';
-    position: absolute;
-    left: 0;
-    color: var(--orange);
-    font-weight: bold;
+  .copy-detail p {
+    color: var(--text);
+    font-size: 0.92rem;
+    margin-bottom: 8px;
+    line-height: 1.55;
+  }
+  .copy-detail p.italic { font-style: italic; color: var(--text-muted); }
+  .copy-detail .label {
+    color: var(--orange-light);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 12px;
+    margin-bottom: 4px;
   }
 
   /* FOOTER */
@@ -283,10 +376,10 @@
 <body>
 
 <div class="hero">
-  <span class="hero-tag">VERSION 2 · MAY 6, 2026</span>
+  <span class="hero-tag">PREPARED FOR BRUCE KIRK · MAY 2026</span>
   <h1>2nd Chance Entrepreneurs™<br>Website Strategy</h1>
-  <p class="subtitle">A new model for second chances — built on Bruce's "redirect, not rehabilitate" positioning, mapped to the StealthEnomics 12-section page framework.</p>
-  <p class="meta">Prepared by Marina Scheffer de Araujo · For Thursday May 8 meeting</p>
+  <p class="subtitle">A complete plan — voice, design, and the full website experience — built around redirecting entrepreneurial drive into Lawful Entrepreneurship™.</p>
+  <p class="meta">Prepared by Marina Scheffer de Araujo · StealthEnomics</p>
 </div>
 
 <div class="container">
@@ -295,90 +388,46 @@
 <div class="toc">
   <h3 style="margin-top:0;color:var(--orange-light);">Contents</h3>
   <ol>
-    <li><a href="#changes">What Changed from v1</a></li>
     <li><a href="#voice">Brand Voice & Positioning</a></li>
     <li><a href="#visual">Visual Direction</a></li>
     <li><a href="#architecture">Site Architecture</a></li>
-    <li><a href="#home">Home Page Copy (12 sections)</a></li>
-    <li><a href="#about">About Page Copy</a></li>
-    <li><a href="#services">Services Page Copy</a></li>
-    <li><a href="#blog">Blog Page Strategy</a></li>
-    <li><a href="#contact">Contact Page Copy</a></li>
-    <li><a href="#funnel">Webinar Funnel Flow</a></li>
-    <li><a href="#priority">Development Priority List</a></li>
-    <li><a href="#actions">Action Items</a></li>
-    <li><a href="#questions">Discussion Questions</a></li>
+    <li><a href="#home">Home Page</a></li>
+    <li><a href="#about">About Page</a></li>
+    <li><a href="#services">Services Page</a></li>
+    <li><a href="#blog">Blog Page</a></li>
+    <li><a href="#contact">Contact Page</a></li>
+    <li><a href="#funnel">Visitor Journey</a></li>
   </ol>
 </div>
 
-<!-- SECTION 1: CHANGES -->
-<section id="changes">
-  <div class="section-num">01 · WHAT'S NEW</div>
-  <h2>What Changed from v1</h2>
-  <table>
-    <thead>
-      <tr><th>v1 Plan</th><th>v2 Plan</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Generic nonprofit positioning</td><td>"Reframe" angle from Bruce's gamma draft</td></tr>
-      <tr><td>4 pages (Home, About, Donate, Contact)</td><td>5 pages (Home, About, Services, Blog, Contact)</td></tr>
-      <tr><td>Donations as primary action</td><td>Webinar registration as primary action</td></tr>
-      <tr><td>Proposed teal + amber + gold</td><td>Bruce's Blue #023D69 + Orange #F9870B</td></tr>
-      <tr><td>Free-form section structure</td><td>StealthEnomics 12-section template per page</td></tr>
-      <tr><td>No copy drafted</td><td>Full proposed copy per section</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- SECTION 2: VOICE -->
+<!-- 1: VOICE -->
 <section id="voice">
-  <div class="section-num">02 · POSITIONING</div>
+  <div class="section-num">01 · POSITIONING</div>
   <h2>Brand Voice & Positioning</h2>
 
-  <h3>Core Insight (from Bruce's gamma draft)</h3>
   <blockquote>"What if they're not people leaving unlawful lifestyles... but entrepreneurs?"</blockquote>
   <blockquote>"Most systems try to fix behavior. That's not the problem. The behavior isn't the issue. It's where it's being applied."</blockquote>
 
-  <h3>Positioning Summary</h3>
-  <p>This is <strong>not</strong> a traditional reentry or rehab nonprofit. The voice is:</p>
+  <p>Every page is built around one idea: <strong>your audience already has what it takes</strong>. The drive, the instinct, the willingness to do hard things — they've already proven it. What they need isn't a new identity. It's a new field to apply who they already are.</p>
+
+  <p>That single shift changes everything about how the site sounds:</p>
   <ul>
     <li><strong>Empowering, not corrective</strong> — participants don't need to be "fixed"</li>
     <li><strong>Direct, not soft</strong> — no euphemisms, no pity, no charity language</li>
     <li><strong>Entrepreneurial, not therapeutic</strong> — speaks to ambition, not recovery</li>
   </ul>
 
-  <h3>Trademarked Terms (use consistently)</h3>
+  <h3>Trademarked Terms</h3>
   <div class="grid-3">
     <div class="card highlight"><strong>Unlawful Entrepreneurship™</strong></div>
     <div class="card highlight"><strong>Lawful Entrepreneurship™</strong></div>
     <div class="card highlight"><strong>2nd Chance Entrepreneurs™</strong></div>
   </div>
-
-  <h3>Voice Rules</h3>
-  <div class="grid-2">
-    <div class="card blue">
-      <h4 style="color:var(--orange-light);">✓ Do say</h4>
-      <ul>
-        <li>"redirect your skills"</li>
-        <li>"you already have what it takes"</li>
-        <li>"this is for entrepreneurs"</li>
-      </ul>
-    </div>
-    <div class="card" style="border-left:4px solid #d33;">
-      <h4 style="color:#ff7c7c;">✗ Don't say</h4>
-      <ul>
-        <li>"rehabilitation"</li>
-        <li>"reform"</li>
-        <li>"broken" / "criminals"</li>
-        <li>"starting over"</li>
-      </ul>
-    </div>
-  </div>
 </section>
 
-<!-- SECTION 3: VISUAL -->
+<!-- 2: VISUAL -->
 <section id="visual">
-  <div class="section-num">03 · VISUAL DIRECTION</div>
+  <div class="section-num">02 · VISUAL DIRECTION</div>
   <h2>Visual Direction</h2>
 
   <div class="grid-2">
@@ -394,308 +443,324 @@
     </div>
   </div>
 
-  <h3>Imagery Direction</h3>
-  <p>Real people. Modern office settings. <strong>No stock "second chance" clichés</strong> — no broken chains, no sunrise photos, no hands reaching out. Match the modern, professional tone of Bruce's gamma draft.</p>
+  <p>Real people. Modern office settings. <strong>No "second chance" clichés</strong> — no broken chains, no sunrise photos, no hands reaching out. The visual tone matches the brand voice: serious, professional, forward-looking.</p>
 </section>
 
-<!-- SECTION 4: ARCHITECTURE -->
+<!-- 3: ARCHITECTURE -->
 <section id="architecture">
-  <div class="section-num">04 · SITE ARCHITECTURE</div>
+  <div class="section-num">03 · SITE ARCHITECTURE</div>
   <h2>Site Architecture</h2>
 
-  <h3>Pages</h3>
-  <ol>
-    <li><strong>Home</strong> — Full StealthEnomics 12-section layout (primary conversion page)</li>
-    <li><strong>About</strong> — Mission + founder story</li>
-    <li><strong>Services</strong> — What's included in the program</li>
-    <li><strong>Blog</strong> — Content marketing + SEO</li>
-    <li><strong>Contact</strong> — Inquiries + info session CTA</li>
-  </ol>
-
-  <h3>Primary CTA Across All Pages</h3>
-  <div class="card highlight">
-    <strong>"Register for the Info Session"</strong>
-    <p style="margin-top:8px;">Every page funnels here. The info session is the entry point to the program.</p>
+  <div class="grid-2">
+    <div class="card highlight">
+      <h4>5 Pages</h4>
+      <ol>
+        <li><strong>Home</strong> — Tells the full story</li>
+        <li><strong>About</strong> — Mission + founder</li>
+        <li><strong>Services</strong> — What's included</li>
+        <li><strong>Blog</strong> — Stories + SEO</li>
+        <li><strong>Contact</strong> — Inquiries</li>
+      </ol>
+    </div>
+    <div class="card blue">
+      <h4>Primary CTA Across All Pages</h4>
+      <p style="margin-top:8px;"><strong>"Register for the Info Session"</strong></p>
+      <p style="font-size:0.9rem;">Every page funnels here. The info session is the entry point — no pressure, no commitment, just an honest look at how the model works.</p>
+    </div>
   </div>
 
-  <h3>Domain</h3>
-  <p><strong>2ndChanceEntrepreneurs.com</strong> (per Bruce's email signature). Confirm with Bruce.</p>
-
-  <div class="card" style="border-left:4px solid #d33; background:rgba(220,50,50,0.1);">
-    <h4 style="color:#ff7c7c;">⚠ Critical Note</h4>
-    <p style="margin:0;"><strong>Do NOT reference Biblically-Led Business or Better Ways Business LLC anywhere on this site.</strong> Legal separation is required (separate nonprofit entity).</p>
-  </div>
+  <p><strong>Domain:</strong> 2ndChanceEntrepreneurs.com</p>
 </section>
 
-<!-- SECTION 5: HOME PAGE -->
+<!-- 4: HOME PAGE -->
 <section id="home">
-  <div class="section-num">05 · HOME PAGE COPY</div>
-  <h2>Home Page — Section by Section</h2>
-  <p style="color:var(--text-muted);">Full StealthEnomics 12-section layout applied. Proposed copy drafted for each section.</p>
+  <div class="section-num">04 · HOME PAGE</div>
+  <h2>Home Page</h2>
+  <p>The home page does the heavy lifting. Below is the wireframe and the proposed copy for each section.</p>
 
-  <div class="section-card">
-    <span class="section-tag">SECTION 1 · GET ATTENTION</span>
-    <h4>Hero</h4>
-    <div class="copy-block">
-      <div class="copy-label">Headline</div>
-      <p class="copy-text">What if they're not people leaving unlawful lifestyles... but entrepreneurs?</p>
+  <!-- HOME MOCKUP -->
+  <div class="mockup-wrapper">
+    <div class="mockup-bar">
+      <div class="mockup-dot r"></div><div class="mockup-dot y"></div><div class="mockup-dot g"></div>
+      <div class="mockup-url">2ndchanceentrepreneurs.com</div>
     </div>
-    <div class="copy-block">
-      <div class="copy-label">Subhead</div>
-      <p class="copy-text">A new kind of second chance — for men and women ready to redirect their drive into Lawful Entrepreneurship™.</p>
+    <div class="mock-nav">
+      <div class="mock-logo">2nd Chance Entrepreneurs™</div>
+      <div class="mock-nav-links"><span>Home</span><span>About</span><span>Services</span><span>Blog</span><span>Contact</span></div>
+      <div class="mock-nav-cta">Register</div>
     </div>
-    <a class="cta-button">Register for the Info Session</a>
+    <div class="mock-hero">
+      <div class="mock-hero-tag">A NEW KIND OF SECOND CHANCE</div>
+      <div class="mock-hero-title">What if they're not people leaving unlawful lifestyles...<br>but entrepreneurs?</div>
+      <div class="mock-hero-sub">Mentorship, education, and infrastructure to redirect your drive into Lawful Entrepreneurship™.</div>
+      <div class="mock-cta">Register for the Info Session →</div>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">THE PROBLEM</div>
+      <h5>Most systems try to fix behavior. That's not the problem.</h5>
+      <p>The behavior isn't the issue. It's where it's being applied.</p>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">THE SOLUTION</div>
+      <h5>Lawful Entrepreneurship™ — built for who they already are.</h5>
+      <p>2nd Chance Entrepreneurs™ equips men and women with a history of Unlawful Entrepreneurship™ to build legal businesses that fit their skills.</p>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">WHAT YOU GET</div>
+      <h5>Four pillars of support.</h5>
+      <div class="mock-grid-2">
+        <div class="mock-card"><strong>1-on-1 Mentorship</strong><span>Real entrepreneurs</span></div>
+        <div class="mock-card"><strong>Education</strong><span>Practical curriculum</span></div>
+        <div class="mock-card"><strong>Infrastructure</strong><span>Legal, brand, ops</span></div>
+        <div class="mock-card"><strong>Peer Community</strong><span>Walking the same path</span></div>
+      </div>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">SOCIAL PROOF</div>
+      <h5>Real stories. Real businesses. Real second chances.</h5>
+      <div class="mock-grid-3">
+        <div class="mock-card"><strong>"Quote..."</strong><span>— Name, Business</span></div>
+        <div class="mock-card"><strong>"Quote..."</strong><span>— Name, Business</span></div>
+        <div class="mock-card"><strong>"Quote..."</strong><span>— Name, Business</span></div>
+      </div>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">FOUNDER</div>
+      <h5>Founded by someone who's seen it from every angle.</h5>
+      <p>Bruce "Captain" Kirk · 2nd Chance Entrepreneurs™ Founder</p>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">THE PATH</div>
+      <h5>Here's what the journey looks like.</h5>
+      <div class="mock-grid-3">
+        <div class="mock-card"><strong>1 · Info Session</strong><span>Free, no commitment</span></div>
+        <div class="mock-card"><strong>2 · Apply</strong><span>Tell us your story</span></div>
+        <div class="mock-card"><strong>3 · Get Matched</strong><span>Mentor + curriculum</span></div>
+      </div>
+    </div>
+    <div class="mock-section" style="background:linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);text-align:center;">
+      <h5 style="margin-bottom:10px;">You're not starting over. You're starting in the right place.</h5>
+      <div class="mock-cta" style="margin-top:10px;">Register for the Info Session →</div>
+    </div>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">SECTION 2 · IDENTIFY THE PROBLEM</span>
-    <h4>Most systems try to fix behavior. That's not the problem.</h4>
-    <div class="copy-block">
-      <p class="copy-text">The system tells them to start over. To be a different person. To take entry-level jobs that don't fit who they are.</p>
-      <p class="copy-text">But the behavior isn't the issue. It's where it's being applied.</p>
-      <p class="copy-text">People with a history of Unlawful Entrepreneurship™ already know how to build, lead, sell, take risks, and survive. They don't need to be fixed. They need a new field to apply what they already know — legally.</p>
-    </div>
+  <h3>Proposed Copy — Section by Section</h3>
+
+  <div class="copy-detail">
+    <span class="copy-detail-tag">HERO</span>
+    <p class="label">Headline</p>
+    <p>What if they're not people leaving unlawful lifestyles... but entrepreneurs?</p>
+    <p class="label">Subhead</p>
+    <p>A new kind of second chance — for men and women ready to redirect their drive into Lawful Entrepreneurship™.</p>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">SECTION 3 · PROVIDE THE SOLUTION</span>
-    <h4>Lawful Entrepreneurship™ — built for who they already are.</h4>
-    <div class="copy-block">
-      <p class="copy-text">2nd Chance Entrepreneurs™ is a nonprofit that equips men and women with a history of Unlawful Entrepreneurship™ — those tired of that lifestyle and ready for something different — with the mentorship, education, and infrastructure to build legal businesses that actually fit their skills and ambition.</p>
-    </div>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">THE PROBLEM</span>
+    <h5>Most systems try to fix behavior. That's not the problem.</h5>
+    <p>The system tells them to start over. To be a different person. To take entry-level jobs that don't fit who they are.</p>
+    <p>But the behavior isn't the issue. It's where it's being applied.</p>
+    <p>People with a history of Unlawful Entrepreneurship™ already know how to build, lead, sell, take risks, and survive. They don't need to be fixed. They need a new field to apply what they already know — legally.</p>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">SECTION 4 · SHOW THE BENEFITS</span>
-    <h4>What you actually get when you join.</h4>
-    <div class="grid-2" style="margin-top:16px;">
-      <div class="card blue"><strong>1-on-1 Mentorship</strong><p style="margin-top:6px;color:var(--text-muted);">Real entrepreneurs who understand the journey, not just the theory</p></div>
-      <div class="card blue"><strong>Entrepreneurial Education</strong><p style="margin-top:6px;color:var(--text-muted);">Practical training designed for real-world execution</p></div>
-      <div class="card blue"><strong>Business Infrastructure</strong><p style="margin-top:6px;color:var(--text-muted);">Hands-on help with legal setup, branding, marketing, operations</p></div>
-      <div class="card blue"><strong>Peer Community</strong><p style="margin-top:6px;color:var(--text-muted);">A network of others walking the same path</p></div>
-    </div>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">THE SOLUTION</span>
+    <h5>Lawful Entrepreneurship™ — built for who they already are.</h5>
+    <p>2nd Chance Entrepreneurs™ is a nonprofit that equips men and women with a history of Unlawful Entrepreneurship™ — those tired of that lifestyle and ready for something different — with the mentorship, education, and infrastructure to build legal businesses that actually fit their skills and ambition.</p>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">SECTION 5 · GIVE SOCIAL PROOF</span>
-    <h4>Real stories. Real businesses. Real second chances.</h4>
-    <div class="copy-block">
-      <p class="copy-text"><em>3 testimonial cards: photo/icon, name + business, 2-3 sentence quote, optional video link.</em></p>
-      <p class="copy-text" style="color:var(--orange-light);margin-top:8px;"><strong>Action item:</strong> Bruce to provide first 3 testimonials. Can launch with placeholder ("Stories coming soon as our first cohort graduates").</p>
-    </div>
-  </div>
-
-  <div class="section-card">
-    <span class="section-tag">SECTION 6 · PRESENT YOUR CREDENTIALS</span>
-    <h4>Founded by someone who's seen it from every angle.</h4>
-    <div class="copy-block">
-      <p class="copy-text">Bruce "Captain" Kirk founded 2nd Chance Entrepreneurs™ after years of working with founders, building businesses, and watching the system fail people who had real entrepreneurial talent — just no legal place to apply it.</p>
-      <p class="copy-text" style="color:var(--orange-light);margin-top:8px;"><strong>Action item:</strong> Get Bruce's full bio. Frame around expertise + mission. Do NOT mention Biblically-Led Business.</p>
-    </div>
-  </div>
-
-  <div class="section-card">
-    <span class="section-tag">SECTION 7 · EXPLAIN/DETAIL THE OFFER</span>
-    <h4>Here's what the path looks like.</h4>
-    <ol style="margin-top:12px;">
-      <li><strong>Attend the Info Session</strong> — Free, no commitment. Get an honest look at the model.</li>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">THE PATH</span>
+    <h5>Here's what the journey looks like.</h5>
+    <ol style="margin-top:8px;">
+      <li><strong>Attend the Info Session</strong> — Free, no commitment.</li>
       <li><strong>Apply to the Program</strong> — Tell us your story and where you want to go.</li>
-      <li><strong>Get Matched</strong> — We pair you with a mentor and the curriculum that fits.</li>
+      <li><strong>Get Matched</strong> — A mentor and curriculum that fit you.</li>
       <li><strong>Launch Your Business</strong> — Real business. Real customers. Real income — legally.</li>
     </ol>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">SECTION 8 · GIVE A WARNING</span>
-    <h4>This isn't for everyone.</h4>
-    <div class="copy-block">
-      <p class="copy-text">If you're looking for a shortcut, a handout, or someone to do the work for you — this isn't it.</p>
-      <p class="copy-text">This is for the ones ready to apply real effort, follow real systems, and build something real. The result is yours to keep — but so is the work.</p>
-    </div>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">WHO IT'S FOR</span>
+    <h5>This isn't for everyone.</h5>
+    <p>If you're looking for a shortcut, a handout, or someone to do the work for you — this isn't it.</p>
+    <p>This is for the ones ready to apply real effort, follow real systems, and build something real. The result is yours to keep — but so is the work.</p>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">SECTION 9 · INJECT SCARCITY</span>
-    <h4>Limited spots per cohort.</h4>
-    <div class="copy-block">
-      <p class="copy-text">We accept a small number of participants per cohort to ensure each person gets real attention from mentors and the support they need.</p>
-      <p class="copy-text">Info sessions are open to everyone. Program applications are reviewed individually.</p>
-    </div>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">OUR COMMITMENT</span>
+    <h5>What we promise — and what we don't.</h5>
+    <p>We don't promise success. Anyone who promises success is selling you something.</p>
+    <p>What we promise: to show up, do the work alongside you, and provide every tool we have. If you bring the effort, we bring the system.</p>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">SECTION 10 · CALL TO ACTION</span>
-    <h4>Take the first step.</h4>
-    <div class="copy-block">
-      <p class="copy-text">The info session is the first step. No pressure. No commitment. Just an honest look at how the model works, what's expected, and whether it's right for you.</p>
-    </div>
-    <a class="cta-button">Register for the Info Session</a>
-  </div>
-
-  <div class="section-card">
-    <span class="section-tag">SECTION 11 · GIVE A GUARANTEE</span>
-    <h4>Our commitment to you.</h4>
-    <div class="copy-block">
-      <p class="copy-text">We don't promise success. Anyone who promises success is selling you something.</p>
-      <p class="copy-text">What we promise: to show up, do the work alongside you, and provide every tool we have. If you bring the effort, we bring the system.</p>
-    </div>
-  </div>
-
-  <div class="section-card">
-    <span class="section-tag">SECTION 12 · CLOSE WITH A REMINDER</span>
-    <h4>You're not starting over. You're starting in the right place.</h4>
-    <div class="copy-block">
-      <p class="copy-text">You already have what it takes. The drive. The instinct. The willingness to do hard things.</p>
-      <p class="copy-text">We're here to help you channel it.</p>
-    </div>
-    <a class="cta-button">Register for the Info Session</a>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">CLOSE</span>
+    <h5>You're not starting over. You're starting in the right place.</h5>
+    <p>You already have what it takes. The drive. The instinct. The willingness to do hard things. We're here to help you channel it.</p>
   </div>
 </section>
 
-<!-- SECTION 6: ABOUT -->
+<!-- 5: ABOUT -->
 <section id="about">
-  <div class="section-num">06 · ABOUT PAGE</div>
-  <h2>About Page — Section by Section</h2>
-  <p style="color:var(--text-muted);">Adapted layout — uses 7 of the 12 sections that fit a mission/team page.</p>
+  <div class="section-num">05 · ABOUT PAGE</div>
+  <h2>About Page</h2>
 
-  <div class="section-card">
-    <span class="section-tag">1 · GET ATTENTION</span>
-    <h4>A new model for second chances.</h4>
-    <div class="copy-block">
-      <div class="copy-label">Subhead</div>
-      <p class="copy-text">Built by people who understand — for people ready to build something different.</p>
+  <!-- ABOUT MOCKUP -->
+  <div class="mockup-wrapper">
+    <div class="mockup-bar">
+      <div class="mockup-dot r"></div><div class="mockup-dot y"></div><div class="mockup-dot g"></div>
+      <div class="mockup-url">2ndchanceentrepreneurs.com/about</div>
+    </div>
+    <div class="mock-nav">
+      <div class="mock-logo">2nd Chance Entrepreneurs™</div>
+      <div class="mock-nav-links"><span>Home</span><span style="color:var(--orange);">About</span><span>Services</span><span>Blog</span><span>Contact</span></div>
+      <div class="mock-nav-cta">Register</div>
+    </div>
+    <div class="mock-hero" style="padding:40px 30px;">
+      <div class="mock-hero-title">A new model for second chances.</div>
+      <div class="mock-hero-sub">Built by people who understand — for people ready to build something different.</div>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">WHY THIS EXISTS</div>
+      <h5>Traditional reentry programs treat people like they need to be fixed. They don't.</h5>
+      <p>They need to be redirected.</p>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">MISSION</div>
+      <h5>Equipping men and women with the tools to redirect their energies into Lawful Entrepreneurship™.</h5>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">FOUNDER</div>
+      <h5>Meet Bruce Kirk.</h5>
+      <p>"I built this because the talent is there. The drive is there. What's missing is somewhere to apply it."</p>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">VALUES</div>
+      <div class="mock-grid-2">
+        <div class="mock-card"><strong>Redirect, not fix</strong></div>
+        <div class="mock-card"><strong>Meet you where you are</strong></div>
+        <div class="mock-card"><strong>Real businesses, not certificates</strong></div>
+        <div class="mock-card"><strong>Treat you like an entrepreneur</strong></div>
+      </div>
+    </div>
+    <div class="mock-section" style="background:linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);text-align:center;">
+      <div class="mock-cta">Register for the Info Session →</div>
     </div>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">2 · IDENTIFY THE PROBLEM</span>
-    <h4>Why this exists.</h4>
-    <div class="copy-block">
-      <p class="copy-text">Traditional reentry programs treat people coming out of unlawful lifestyles like they need to be fixed. They don't.</p>
-      <p class="copy-text">They need to be redirected.</p>
-      <p class="copy-text">Most of them already have the skills that make a great entrepreneur — they've taken risks, led teams, managed money, sold under pressure. The problem was never their capacity. It was where that capacity was being applied.</p>
-      <p class="copy-text">We built 2nd Chance Entrepreneurs™ to give those skills a legal home.</p>
-    </div>
+  <h3>Proposed Copy</h3>
+
+  <div class="copy-detail">
+    <span class="copy-detail-tag">WHY THIS EXISTS</span>
+    <p>Traditional reentry programs treat people coming out of unlawful lifestyles like they need to be fixed. They don't.</p>
+    <p>They need to be redirected.</p>
+    <p>Most of them already have the skills that make a great entrepreneur — they've taken risks, led teams, managed money, sold under pressure. The problem was never their capacity. It was where that capacity was being applied.</p>
+    <p>We built 2nd Chance Entrepreneurs™ to give those skills a legal home.</p>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">3 · PROVIDE THE SOLUTION</span>
-    <h4>Our mission.</h4>
-    <div class="copy-block">
-      <p class="copy-text">To equip men and women with a history of Unlawful Entrepreneurship™ — those sick and tired of that lifestyle — with the mentorship, education, and resources to redirect their energies and passions into Lawful Entrepreneurship™.</p>
-    </div>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">MISSION</span>
+    <p>To equip men and women with a history of Unlawful Entrepreneurship™ — those sick and tired of that lifestyle — with the mentorship, education, and resources to redirect their energies and passions into Lawful Entrepreneurship™.</p>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">4 · PRESENT YOUR CREDENTIALS</span>
-    <h4>Meet our founder.</h4>
-    <div class="copy-block">
-      <p class="copy-text">[Bruce's full founder story to be drafted with him.]</p>
-      <blockquote style="margin-top:12px;">"I built this because the talent is there. The drive is there. What's missing is somewhere to apply it that won't put people back in the system."<br>— Bruce Kirk, Founder</blockquote>
-    </div>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">VALUES</span>
+    <ul>
+      <li><strong>We don't fix behavior. We redirect skills.</strong> Our participants aren't broken. They're misapplied.</li>
+      <li><strong>We meet people where they are.</strong> No prerequisites. No pretending. Real conversations.</li>
+      <li><strong>We measure success in launched businesses.</strong> Not certificates. Real revenue.</li>
+      <li><strong>We treat participants like entrepreneurs.</strong> Because that's what they are.</li>
+    </ul>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">5 · SHOW THE BENEFITS</span>
-    <h4>What makes us different.</h4>
-    <div class="grid-2" style="margin-top:16px;">
-      <div class="card blue"><strong>We don't fix behavior. We redirect skills.</strong><p style="margin-top:6px;color:var(--text-muted);">Our participants aren't broken. They're misapplied.</p></div>
-      <div class="card blue"><strong>We meet people where they are.</strong><p style="margin-top:6px;color:var(--text-muted);">No prerequisites. No pretending. Real conversations.</p></div>
-      <div class="card blue"><strong>We measure success in launched businesses.</strong><p style="margin-top:6px;color:var(--text-muted);">Not completed programs. Not certificates. Real revenue.</p></div>
-      <div class="card blue"><strong>We treat participants like entrepreneurs.</strong><p style="margin-top:6px;color:var(--text-muted);">Because that's what they are.</p></div>
-    </div>
-  </div>
-
-  <div class="section-card">
-    <span class="section-tag">6 · CALL TO ACTION</span>
-    <h4>Want to learn more?</h4>
-    <div class="copy-block">
-      <p class="copy-text">Our info session is the best way to see how the model works.</p>
-    </div>
-    <a class="cta-button">Register for the Info Session</a>
-  </div>
-
-  <div class="section-card">
-    <span class="section-tag">7 · CLOSE WITH A REMINDER</span>
-    <div class="copy-block">
-      <p class="copy-text">We believe in second chances — but more than that, we believe in second applications of the same drive that got people in trouble in the first place.</p>
-    </div>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">CLOSE</span>
+    <p>We believe in second chances — but more than that, we believe in second applications of the same drive that got people in trouble in the first place.</p>
   </div>
 </section>
 
-<!-- SECTION 7: SERVICES -->
+<!-- 6: SERVICES -->
 <section id="services">
-  <div class="section-num">07 · SERVICES PAGE</div>
-  <h2>Services Page — Section by Section</h2>
-  <p style="color:var(--text-muted);">8 sections used. The "Explain Offer" section is the most detailed — it's the meat of this page.</p>
+  <div class="section-num">06 · SERVICES PAGE</div>
+  <h2>Services Page</h2>
 
-  <div class="section-card">
-    <span class="section-tag">1 · GET ATTENTION</span>
-    <h4>What we provide.</h4>
-    <div class="copy-block">
-      <div class="copy-label">Subhead</div>
-      <p class="copy-text">Everything you need to redirect your skills into a real business.</p>
+  <!-- SERVICES MOCKUP -->
+  <div class="mockup-wrapper">
+    <div class="mockup-bar">
+      <div class="mockup-dot r"></div><div class="mockup-dot y"></div><div class="mockup-dot g"></div>
+      <div class="mockup-url">2ndchanceentrepreneurs.com/services</div>
+    </div>
+    <div class="mock-nav">
+      <div class="mock-logo">2nd Chance Entrepreneurs™</div>
+      <div class="mock-nav-links"><span>Home</span><span>About</span><span style="color:var(--orange);">Services</span><span>Blog</span><span>Contact</span></div>
+      <div class="mock-nav-cta">Register</div>
+    </div>
+    <div class="mock-hero" style="padding:40px 30px;">
+      <div class="mock-hero-title">What we provide.</div>
+      <div class="mock-hero-sub">Everything you need to redirect your skills into a real business.</div>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">THREE PILLARS</div>
+      <div class="mock-grid-3">
+        <div class="mock-card"><strong>Mentorship</strong><span>1-on-1 guidance</span></div>
+        <div class="mock-card"><strong>Education</strong><span>Practical curriculum</span></div>
+        <div class="mock-card"><strong>Community</strong><span>Peer network</span></div>
+      </div>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">CURRICULUM</div>
+      <h5>6 modules — from identity to scaling.</h5>
+      <p>Module 1: Who you are as an entrepreneur · Module 2: Legal structure · Module 3: Finding your market · Module 4: Operations · Module 5: Branding & marketing · Module 6: Scaling responsibly</p>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">OUTCOMES</div>
+      <h5>By the end, you'll have a registered business, real customers, and a network.</h5>
+    </div>
+    <div class="mock-section" style="background:linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);text-align:center;">
+      <div class="mock-cta">Register for the Info Session →</div>
     </div>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">2 · IDENTIFY THE PROBLEM</span>
-    <h4>Most programs leave you stuck.</h4>
-    <div class="copy-block">
-      <p class="copy-text">They give you a workbook. A motivational speech. A "business plan template." Then they send you home.</p>
-      <p class="copy-text">We don't do that.</p>
-    </div>
+  <h3>Proposed Copy</h3>
+
+  <div class="copy-detail">
+    <span class="copy-detail-tag">THE PROBLEM</span>
+    <h5>Most programs leave you stuck.</h5>
+    <p>They give you a workbook. A motivational speech. A "business plan template." Then they send you home.</p>
+    <p>We don't do that.</p>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">3 · SHOW THE BENEFITS</span>
-    <h4>Three pillars of support.</h4>
-    <div class="grid-3" style="margin-top:16px;">
-      <div class="card blue"><strong>Mentorship</strong><p style="margin-top:6px;color:var(--text-muted);">One-on-one guidance from entrepreneurs who've been through the journey</p></div>
-      <div class="card blue"><strong>Education</strong><p style="margin-top:6px;color:var(--text-muted);">Practical curriculum designed for real-world execution</p></div>
-      <div class="card blue"><strong>Community</strong><p style="margin-top:6px;color:var(--text-muted);">Peer network of others on the same path</p></div>
-    </div>
-  </div>
-
-  <div class="section-card">
-    <span class="section-tag">4 · EXPLAIN/DETAIL THE OFFER (the meat)</span>
-    <h4>Here's exactly what's included.</h4>
-
-    <h4 style="color:var(--orange-light);margin-top:24px;">Mentorship Program</h4>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">WHAT'S INCLUDED</span>
+    <h5>Mentorship Program</h5>
     <ul>
       <li>Weekly 1-on-1 sessions with a matched mentor</li>
       <li>Mentors who've built real businesses (not just consultants)</li>
       <li>Direct access for questions outside scheduled sessions</li>
       <li>12-month commitment</li>
     </ul>
-
-    <h4 style="color:var(--orange-light);">Educational Curriculum</h4>
+    <h5 style="margin-top:16px;">Educational Curriculum</h5>
     <ul>
       <li><strong>Module 1:</strong> Who you are as an entrepreneur (assessment + reframe)</li>
       <li><strong>Module 2:</strong> Legal business structure (LLC, EIN, tax basics)</li>
       <li><strong>Module 3:</strong> Finding your market (the legal version of what you already do)</li>
       <li><strong>Module 4:</strong> Operations (banking, accounting, contracts)</li>
-      <li><strong>Module 5:</strong> Branding & marketing (digital presence, customer acquisition)</li>
-      <li><strong>Module 6:</strong> Scaling responsibly (hiring, systems, growth)</li>
+      <li><strong>Module 5:</strong> Branding & marketing</li>
+      <li><strong>Module 6:</strong> Scaling responsibly</li>
     </ul>
-
-    <h4 style="color:var(--orange-light);">Peer Community</h4>
+    <h5 style="margin-top:16px;">Peer Community</h5>
     <ul>
       <li>Private group of all current and past participants</li>
       <li>Monthly group calls</li>
       <li>Quarterly in-person meetups</li>
       <li>Resource library and tool access</li>
     </ul>
-
-    <div class="copy-block" style="margin-top:16px;">
-      <p class="copy-text" style="color:var(--orange-light);"><strong>Action item:</strong> Confirm exact program structure with Bruce. Above is a proposed framework.</p>
-    </div>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">5 · PROVIDE THE SOLUTION</span>
-    <h4>By the end of the program, you'll have:</h4>
-    <ul style="margin-top:12px;">
+  <div class="copy-detail">
+    <span class="copy-detail-tag">OUTCOMES</span>
+    <h5>By the end of the program, you'll have:</h5>
+    <ul>
       <li>A registered, lawful business</li>
       <li>Real customers (or a clear path to them)</li>
       <li>A network of mentors and peers</li>
@@ -703,93 +768,115 @@
     </ul>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">6 · GIVE SOCIAL PROOF</span>
-    <h4>What graduates are saying.</h4>
-    <div class="copy-block">
-      <p class="copy-text"><em>Placeholder — populate as testimonials become available.</em></p>
-    </div>
-  </div>
-
-  <div class="section-card">
-    <span class="section-tag">7 · CALL TO ACTION</span>
-    <h4>Ready to learn more?</h4>
-    <a class="cta-button">Register for the Info Session</a>
-  </div>
-
-  <div class="section-card">
-    <span class="section-tag">8 · CLOSE WITH A REMINDER</span>
-    <div class="copy-block">
-      <p class="copy-text">We don't take everyone. But for the ones we take — we go all in.</p>
-    </div>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">CLOSE</span>
+    <p>We don't take everyone. But for the ones we take — we go all in.</p>
   </div>
 </section>
 
-<!-- SECTION 8: BLOG -->
+<!-- 7: BLOG -->
 <section id="blog">
-  <div class="section-num">08 · BLOG STRATEGY</div>
+  <div class="section-num">07 · BLOG PAGE</div>
   <h2>Blog Page</h2>
 
-  <div class="section-card">
-    <h4>Headline</h4>
-    <div class="copy-block">
-      <p class="copy-text">Real stories. Real strategy. Real second chances.</p>
+  <!-- BLOG MOCKUP -->
+  <div class="mockup-wrapper">
+    <div class="mockup-bar">
+      <div class="mockup-dot r"></div><div class="mockup-dot y"></div><div class="mockup-dot g"></div>
+      <div class="mockup-url">2ndchanceentrepreneurs.com/blog</div>
     </div>
-
-    <h4>Intro Copy</h4>
-    <div class="copy-block">
-      <p class="copy-text">This isn't a typical business blog.</p>
-      <p class="copy-text">It's a place for honest conversations about what it actually takes to redirect your skills into something legal — written by people who've done it, are doing it, and want to help others do the same.</p>
+    <div class="mock-nav">
+      <div class="mock-logo">2nd Chance Entrepreneurs™</div>
+      <div class="mock-nav-links"><span>Home</span><span>About</span><span>Services</span><span style="color:var(--orange);">Blog</span><span>Contact</span></div>
+      <div class="mock-nav-cta">Register</div>
+    </div>
+    <div class="mock-hero" style="padding:40px 30px;">
+      <div class="mock-hero-title">Real stories. Real strategy. Real second chances.</div>
+      <div class="mock-hero-sub">Honest conversations about what it actually takes to redirect your skills into something legal.</div>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">CATEGORIES</div>
+      <div class="mock-grid-2">
+        <div class="mock-card"><strong>Stories from the Path</strong><span>Graduate journeys</span></div>
+        <div class="mock-card"><strong>Real Talk</strong><span>Founder & mentor essays</span></div>
+        <div class="mock-card"><strong>The Skills You Already Have</strong><span>Reframe content</span></div>
+        <div class="mock-card"><strong>Practical Steps</strong><span>How-tos & guides</span></div>
+      </div>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">FEATURED POSTS</div>
+      <div class="mock-grid-3">
+        <div class="mock-card"><strong>Post Title 1</strong><span>Category · Date</span></div>
+        <div class="mock-card"><strong>Post Title 2</strong><span>Category · Date</span></div>
+        <div class="mock-card"><strong>Post Title 3</strong><span>Category · Date</span></div>
+      </div>
     </div>
   </div>
 
-  <h3>Suggested Categories</h3>
-  <div class="grid-2">
-    <div class="card highlight"><strong>Stories from the Path</strong><p style="margin-top:6px;color:var(--text-muted);">Graduate journeys, milestones, lessons learned</p></div>
-    <div class="card highlight"><strong>Real Talk</strong><p style="margin-top:6px;color:var(--text-muted);">Founder + mentor essays on hard topics</p></div>
-    <div class="card highlight"><strong>The Skills You Already Have</strong><p style="margin-top:6px;color:var(--text-muted);">Reframe content — entrepreneurial value of past experience</p></div>
-    <div class="card highlight"><strong>Practical Steps</strong><p style="margin-top:6px;color:var(--text-muted);">How-tos for legal business setup, marketing, operations</p></div>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">INTRO COPY</span>
+    <h5>Real stories. Real strategy. Real second chances.</h5>
+    <p>This isn't a typical business blog.</p>
+    <p>It's a place for honest conversations about what it actually takes to redirect your skills into something legal — written by people who've done it, are doing it, and want to help others do the same.</p>
   </div>
 
-  <h3>SEO Strategy</h3>
-  <div class="card">
-    <h4>Target keywords (low competition, high intent)</h4>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">SEO TARGETS</span>
+    <p>Keywords with low competition and high audience intent that the blog will go after over time:</p>
     <ul>
       <li>"starting a business with a felony"</li>
       <li>"second chance entrepreneur programs"</li>
       <li>"business mentorship after incarceration"</li>
-      <li>"Philadelphia business programs for ex-offenders" (geo-specific)</li>
-      <li>"lawful entrepreneurship" (own this term — it's trademarked)</li>
+      <li>"Philadelphia business programs for ex-offenders"</li>
+      <li>"lawful entrepreneurship" (your trademarked term)</li>
     </ul>
-    <p style="margin-top:12px;"><strong>Posting cadence:</strong> 1-2 posts per month minimum, mix of all 4 categories.</p>
+    <p style="margin-top:12px;"><strong>Posting cadence:</strong> 1-2 posts per month, mix of all 4 categories.</p>
   </div>
 </section>
 
-<!-- SECTION 9: CONTACT -->
+<!-- 8: CONTACT -->
 <section id="contact">
-  <div class="section-num">09 · CONTACT PAGE</div>
+  <div class="section-num">08 · CONTACT PAGE</div>
   <h2>Contact Page</h2>
 
-  <div class="section-card">
-    <span class="section-tag">1 · GET ATTENTION</span>
-    <h4>Let's talk.</h4>
-    <div class="copy-block">
-      <div class="copy-label">Subhead</div>
-      <p class="copy-text">Whether you're considering the program or just have questions — we're here.</p>
+  <!-- CONTACT MOCKUP -->
+  <div class="mockup-wrapper">
+    <div class="mockup-bar">
+      <div class="mockup-dot r"></div><div class="mockup-dot y"></div><div class="mockup-dot g"></div>
+      <div class="mockup-url">2ndchanceentrepreneurs.com/contact</div>
+    </div>
+    <div class="mock-nav">
+      <div class="mock-logo">2nd Chance Entrepreneurs™</div>
+      <div class="mock-nav-links"><span>Home</span><span>About</span><span>Services</span><span>Blog</span><span style="color:var(--orange);">Contact</span></div>
+      <div class="mock-nav-cta">Register</div>
+    </div>
+    <div class="mock-hero" style="padding:40px 30px;">
+      <div class="mock-hero-title">Let's talk.</div>
+      <div class="mock-hero-sub">Whether you're considering the program or just have questions — we're here.</div>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">FORM</div>
+      <h5>Contact form</h5>
+      <p>Name · Email · Phone · "What brings you here?" dropdown · Message</p>
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-tag">DIRECT CONTACT</div>
+      <p>BruceKirk@2ndChanceEntrepreneurs.com · (610) 563-6683 · 19 Greenbriar Rd, Thorndale, PA 19372</p>
+    </div>
+    <div class="mock-section" style="background:linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);text-align:center;">
+      <div class="mock-cta">Register for the Info Session →</div>
     </div>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">2 · IDENTIFY THE PROBLEM</span>
-    <div class="copy-block">
-      <p class="copy-text">Most people who reach out aren't sure if this is for them. That's okay.</p>
-      <p class="copy-text">The conversation costs nothing.</p>
-    </div>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">INTRO</span>
+    <h5>Let's talk.</h5>
+    <p>Whether you're considering the program or just have questions — we're here.</p>
+    <p>Most people who reach out aren't sure if this is for them. That's okay. The conversation costs nothing.</p>
   </div>
 
-  <div class="section-card">
-    <span class="section-tag">3 · CONTACT FORM</span>
-    <h4>Form fields</h4>
+  <div class="copy-detail">
+    <span class="copy-detail-tag">FORM FIELDS</span>
     <ul>
       <li>Name</li>
       <li>Email</li>
@@ -805,152 +892,36 @@
       <li>Message</li>
     </ul>
   </div>
-
-  <div class="section-card">
-    <span class="section-tag">4 · DIRECT CONTACT</span>
-    <ul>
-      <li><strong>Email:</strong> BruceKirk@2ndChanceEntrepreneurs.com</li>
-      <li><strong>Phone:</strong> (610) 563-6683</li>
-      <li><strong>Address:</strong> 19 Greenbriar Rd, Thorndale, PA 19372</li>
-    </ul>
-  </div>
-
-  <div class="section-card">
-    <span class="section-tag">5 · CALL TO ACTION</span>
-    <div class="copy-block">
-      <p class="copy-text">If the program is what brought you here — the info session is the best place to start.</p>
-    </div>
-    <a class="cta-button">Register for the Info Session</a>
-  </div>
 </section>
 
-<!-- SECTION 10: FUNNEL -->
+<!-- 9: FUNNEL -->
 <section id="funnel">
-  <div class="section-num">10 · WEBINAR FUNNEL</div>
-  <h2>Webinar Funnel Flow</h2>
+  <div class="section-num">09 · VISITOR JOURNEY</div>
+  <h2>How Visitors Move Through the Site</h2>
+  <p>Every page on the site funnels to one place: the info session. From there, the path to the program is clear and friction-free.</p>
 
   <div class="card highlight">
-    <h4>Primary Conversion Path</h4>
-    <p style="font-family:monospace;font-size:0.9rem;margin-top:12px;">Any Page → "Register for Info Session" CTA → Registration Form → Confirmation Page → Email Sequence → Info Session → Application Form → Program Enrollment</p>
+    <p style="font-family:monospace;font-size:0.95rem;line-height:1.8;text-align:center;">
+      Any Page<br>
+      ↓<br>
+      <strong>"Register for the Info Session"</strong><br>
+      ↓<br>
+      Registration Form → Confirmation<br>
+      ↓<br>
+      Email Reminders (3 days · 1 day · 3 hours before)<br>
+      ↓<br>
+      <strong>Info Session</strong><br>
+      ↓<br>
+      Application → Program Enrollment
+    </p>
   </div>
-
-  <h3>Email Sequence Recommendation</h3>
-  <table>
-    <thead><tr><th>Timing</th><th>Email</th></tr></thead>
-    <tbody>
-      <tr><td>Immediate</td><td>Confirmation + calendar invite + what to expect</td></tr>
-      <tr><td>3 days before</td><td>"Here's what we'll cover" + reminder</td></tr>
-      <tr><td>Day of</td><td>"Starting in X hours" + access link</td></tr>
-      <tr><td>Day after</td><td>"Missed it? Here's the recording" + apply link</td></tr>
-    </tbody>
-  </table>
-
-  <h3>Tools Needed</h3>
-  <ul>
-    <li><strong>Webinar platform:</strong> Zoom, Google Meet, or hosted</li>
-    <li><strong>Email automation:</strong> Mailchimp, ConvertKit, or HubSpot</li>
-    <li><strong>Application form:</strong> Google Forms minimum, ideally Typeform or Tally</li>
-    <li><strong>CRM:</strong> HubSpot free tier works for lead tracking</li>
-  </ul>
-</section>
-
-<!-- SECTION 11: PRIORITY -->
-<section id="priority">
-  <div class="section-num">11 · DEVELOPMENT PRIORITY</div>
-  <h2>Development Priority List</h2>
-
-  <div class="card highlight">
-    <h4>P0 — Launch (Week 1-2)</h4>
-    <ul>
-      <li>Domain registered + SSL active</li>
-      <li>Home, About, Services, Contact pages live</li>
-      <li>Webinar registration form working</li>
-      <li>Basic analytics (GA4 + Meta Pixel for future ads)</li>
-      <li>Mobile responsive</li>
-    </ul>
-  </div>
-
-  <div class="card blue">
-    <h4>P1 — Within 30 Days</h4>
-    <ul>
-      <li>Blog functional with 2-3 launch posts</li>
-      <li>Email automation for webinar sequence</li>
-      <li>3 testimonials (placeholder OK at launch)</li>
-      <li>Bruce's full bio + headshot</li>
-      <li>Application form connected</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h4>P2 — Within 60 Days</h4>
-    <ul>
-      <li>Donation infrastructure (501(c)(3) compliance, fiscal sponsor if applicable)</li>
-      <li>SEO optimization for target keywords</li>
-      <li>Social proof expanded</li>
-      <li>Mentor application page (if separate)</li>
-    </ul>
-  </div>
-</section>
-
-<!-- SECTION 12: ACTIONS -->
-<section id="actions">
-  <div class="section-num">12 · ACTION ITEMS</div>
-  <h2>Action Items</h2>
-
-  <div class="grid-2">
-    <div class="card highlight">
-      <h4>For Bruce</h4>
-      <ul class="checklist">
-        <li>Approve this strategy or flag changes</li>
-        <li>Provide founder bio + headshot</li>
-        <li>Confirm exact program structure</li>
-        <li>Provide 3 testimonials (placeholders OK)</li>
-        <li>Confirm domain ownership</li>
-      </ul>
-    </div>
-    <div class="card blue">
-      <h4>For Dev Team (Demond)</h4>
-      <ul class="checklist">
-        <li>Confirm CMS / build platform</li>
-        <li>Set up domain + hosting</li>
-        <li>Build P0 pages per spec</li>
-        <li>Install analytics + Meta Pixel</li>
-        <li>Connect webinar registration to email</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h4>For Marina</h4>
-      <ul class="checklist">
-        <li>Refine copy after Bruce's feedback</li>
-        <li>Prepare blog brief templates</li>
-        <li>Set up tracking infrastructure</li>
-        <li>Coordinate testimonial collection</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 13: QUESTIONS -->
-<section id="questions">
-  <div class="section-num">13 · DISCUSSION</div>
-  <h2>Discussion Questions for Thursday's Meeting</h2>
-
-  <ol>
-    <li><strong>Tone alignment</strong> — Does the "redirect, not rehabilitate" voice land the way Bruce intends?</li>
-    <li><strong>Program details</strong> — Is the proposed module structure accurate, or what should it be?</li>
-    <li><strong>Webinar logistics</strong> — Live, recorded, or both? How often?</li>
-    <li><strong>Testimonials</strong> — Any current participants we can feature, or do we launch with placeholders?</li>
-    <li><strong>Donation strategy</strong> — When does donation infrastructure go in? P0 or later?</li>
-    <li><strong>Brand assets</strong> — Logo? Photography? What does Bruce have already?</li>
-    <li><strong>Compliance</strong> — 501(c)(3) status — is fiscal sponsorship in place?</li>
-  </ol>
 </section>
 
 </div>
 
 <footer>
-  <p>2nd Chance Entrepreneurs™ — Website Strategy v2 · May 6, 2026</p>
-  <p style="margin-top:8px;">Prepared by Marina Scheffer de Araujo · StealthEnomics</p>
+  <p>2nd Chance Entrepreneurs™ — Website Strategy</p>
+  <p style="margin-top:8px;">Prepared by Marina Scheffer de Araujo · StealthEnomics · May 2026</p>
 </footer>
 
 </body>
