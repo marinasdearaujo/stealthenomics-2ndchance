@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2nd Chance Entrepreneurs™ — Website Strategy</title>
+<title>2nd Chance Entrepreneurs™ — Website Strategy v3</title>
 <style>
   :root {
     --blue: #023D69;
@@ -47,8 +47,11 @@
   .toc ol { margin-left: 20px; }
   .toc a { color: var(--orange-light); text-decoration: none; }
   .toc a:hover { text-decoration: underline; }
+  .changelog { background: rgba(249,135,11,0.08); border: 1px solid var(--orange); border-radius: 8px; padding: 20px 24px; margin: 20px 0; }
+  .changelog h4 { color: var(--orange-light); margin-top: 0; }
+  .changelog ul { margin: 8px 0 0 20px; }
+  .changelog li { color: var(--text); font-size: 0.92rem; }
 
-  /* TABS */
   .page-tabs { display: flex; gap: 4px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 6px; margin: 24px 0 28px; flex-wrap: wrap; }
   .page-tab { flex: 1; min-width: 120px; background: transparent; border: none; color: var(--text-muted); padding: 12px 20px; border-radius: 6px; font-family: inherit; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: all 0.15s; letter-spacing: 0.02em; }
   .page-tab:hover { color: white; background: rgba(255,255,255,0.04); }
@@ -57,7 +60,6 @@
   .page-content { display: none; }
   .page-content.active { display: block; }
 
-  /* MOCKUP */
   .mockup-wrapper { background: white; border-radius: 12px; overflow: hidden; margin: 0; box-shadow: 0 12px 40px rgba(0,0,0,0.5); border: 1px solid var(--border); }
   .mockup-bar { background: #E8EAF0; padding: 10px 14px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #C5CAD4; }
   .mockup-dot { width: 11px; height: 11px; border-radius: 50%; }
@@ -88,31 +90,40 @@
   .mock-section-dark p:last-child { margin-bottom: 0; }
   .mock-section-dark .mock-section-tag { color: var(--orange); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.18em; margin-bottom: 10px; display: block; }
 
+  .mock-section-mentor { background: linear-gradient(135deg, #1a2238 0%, #023D69 100%); padding: 56px 50px; color: white; border-top: 4px solid var(--orange); }
+  .mock-section-mentor h5 { color: white; font-size: 1.7rem; font-weight: 900; margin-bottom: 16px; letter-spacing: -0.02em; line-height: 1.2; }
+  .mock-section-mentor p { color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 14px; line-height: 1.6; }
+  .mock-section-mentor .mock-section-tag { color: var(--orange-light); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.18em; margin-bottom: 10px; display: block; }
+
   .mock-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
   .mock-pillars.three { grid-template-columns: 1fr 1fr 1fr; }
   .mock-pillar { background: rgba(2,61,105,0.04); border: 1px solid rgba(2,61,105,0.1); border-left: 3px solid var(--orange); border-radius: 6px; padding: 20px; }
-  .mock-section-dark .mock-pillar { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); }
+  .mock-section-dark .mock-pillar, .mock-section-mentor .mock-pillar { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); }
   .mock-pillar-icon { width: 34px; height: 34px; background: var(--orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.85rem; margin-bottom: 12px; }
   .mock-pillar strong { display: block; font-size: 0.95rem; color: var(--blue-dark); margin-bottom: 6px; font-weight: 800; }
-  .mock-section-dark .mock-pillar strong { color: white; }
+  .mock-section-dark .mock-pillar strong, .mock-section-mentor .mock-pillar strong { color: white; }
   .mock-pillar span { font-size: 0.85rem; color: #6A7280; line-height: 1.5; }
-  .mock-section-dark .mock-pillar span { color: rgba(255,255,255,0.7); }
+  .mock-section-dark .mock-pillar span, .mock-section-mentor .mock-pillar span { color: rgba(255,255,255,0.7); }
 
-  .mock-journey { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0; margin-top: 28px; position: relative; }
-  .mock-journey::before { content: ''; position: absolute; top: 22px; left: 12.5%; right: 12.5%; height: 2px; background: var(--orange); z-index: 0; }
-  .mock-step { text-align: center; position: relative; z-index: 1; padding: 0 10px; }
-  .mock-step-num { width: 46px; height: 46px; background: var(--orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.15rem; margin: 0 auto 14px; border: 3px solid white; }
-  .mock-section-dark .mock-step-num { border-color: var(--blue-dark); }
-  .mock-step strong { display: block; font-size: 0.95rem; margin-bottom: 6px; font-weight: 800; color: var(--blue-dark); }
-  .mock-section-dark .mock-step strong { color: white; }
-  .mock-step span { font-size: 0.82rem; color: #6A7280; line-height: 1.45; }
-  .mock-section-dark .mock-step span { color: rgba(255,255,255,0.65); }
+  .mock-pathway { margin-top: 28px; }
+  .mock-pathway-track { position: relative; padding: 30px 0 10px; }
+  .mock-pathway-track::before { content: ''; position: absolute; top: 38px; left: 5%; right: 5%; height: 3px; background: var(--orange); z-index: 0; border-radius: 2px; }
+  .mock-pathway-steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; position: relative; z-index: 1; }
+  .mock-pathway-step { text-align: center; padding: 0 12px; }
+  .mock-pathway-step-num { width: 60px; height: 60px; background: var(--orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.3rem; margin: 0 auto 14px; border: 4px solid white; box-shadow: 0 4px 12px rgba(249,135,11,0.3); }
+  .mock-section-dark .mock-pathway-step-num, .mock-section-mentor .mock-pathway-step-num { border-color: var(--blue-dark); }
+  .mock-pathway-duration { display: inline-block; background: rgba(249,135,11,0.15); color: var(--orange); font-size: 0.7rem; font-weight: 800; padding: 3px 10px; border-radius: 10px; letter-spacing: 0.05em; margin-bottom: 8px; }
+  .mock-section-dark .mock-pathway-duration, .mock-section-mentor .mock-pathway-duration { background: rgba(249,135,11,0.2); color: var(--orange-light); }
+  .mock-pathway-step strong { display: block; font-size: 1.05rem; margin-bottom: 8px; font-weight: 800; color: var(--blue-dark); }
+  .mock-section-dark .mock-pathway-step strong, .mock-section-mentor .mock-pathway-step strong { color: white; }
+  .mock-pathway-step span { font-size: 0.85rem; color: #6A7280; line-height: 1.5; display: block; }
+  .mock-section-dark .mock-pathway-step span, .mock-section-mentor .mock-pathway-step span { color: rgba(255,255,255,0.7); }
 
   .mock-founder { display: flex; gap: 30px; align-items: flex-start; }
   .mock-founder-photo { width: 130px; height: 130px; border-radius: 50%; background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%); flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 2rem; border: 4px solid var(--orange); }
   .mock-founder-content { flex: 1; }
   .mock-founder-content blockquote { background: transparent; border: none; border-left: 3px solid var(--orange); padding: 4px 18px; margin: 14px 0 0; font-size: 1rem; font-style: italic; color: #4A5568; border-radius: 0; }
-  .mock-section-dark .mock-founder-content blockquote { color: rgba(255,255,255,0.85); }
+  .mock-section-dark .mock-founder-content blockquote, .mock-section-mentor .mock-founder-content blockquote { color: rgba(255,255,255,0.85); }
   .mock-founder-content .name { font-size: 0.85rem; color: var(--orange); font-weight: 700; margin-top: 8px; }
 
   .mock-testimonials { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 22px; }
@@ -123,6 +134,12 @@
   .mock-section-dark .mock-testimonial p { color: rgba(255,255,255,0.8); }
   .mock-testimonial .author { font-size: 0.78rem; color: var(--blue); font-weight: 700; font-style: normal; }
   .mock-section-dark .mock-testimonial .author { color: var(--orange-light); }
+
+  .mock-testimonial-feature { background: rgba(249,135,11,0.06); border-left: 4px solid var(--orange); border-radius: 0 8px 8px 0; padding: 28px 32px; margin-top: 22px; }
+  .mock-section-dark .mock-testimonial-feature, .mock-section-mentor .mock-testimonial-feature { background: rgba(255,255,255,0.05); }
+  .mock-testimonial-feature p { font-size: 1.1rem; line-height: 1.55; color: #1A2333; margin-bottom: 14px; font-style: italic; font-weight: 500; }
+  .mock-section-dark .mock-testimonial-feature p, .mock-section-mentor .mock-testimonial-feature p { color: white; }
+  .mock-testimonial-feature .author { font-size: 0.85rem; color: var(--orange); font-weight: 700; font-style: normal; }
 
   .mock-section-cta { background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%); padding: 70px 50px; text-align: center; color: white; position: relative; overflow: hidden; }
   .mock-section-cta::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--orange); }
@@ -155,24 +172,47 @@
   .mock-list li { color: #4A5568; font-size: 0.95rem; margin-bottom: 8px; }
   .mock-section-dark .mock-list li { color: rgba(255,255,255,0.8); }
 
+  .mock-involve-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
+  .mock-involve-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 24px; text-align: center; }
+  .mock-involve-icon { font-size: 1.8rem; margin-bottom: 10px; }
+  .mock-involve-card strong { display: block; color: white; font-size: 1.05rem; margin-bottom: 6px; font-weight: 800; }
+  .mock-involve-card span { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.5; }
+
   footer { background: var(--blue-dark); padding: 40px 30px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
 </style>
 </head>
 <body>
 
 <div class="hero">
-  <span class="hero-tag">PREPARED FOR BRUCE KIRK · MAY 2026</span>
+  <span class="hero-tag">PREPARED FOR BRUCE KIRK · V3 — POST-MEETING UPDATES · MAY 2026</span>
   <h1>2nd Chance Entrepreneurs™<br>Website Strategy</h1>
-  <p class="subtitle">A complete plan — voice, design, and the full website experience — built around redirecting entrepreneurial drive into Lawful Entrepreneurship™.</p>
+  <p class="subtitle">Updated based on the May 8 review — sharper voice, "you" throughout, the pathway framing, mentor/contributor section added.</p>
   <p class="meta">Prepared by Marina Scheffer de Araujo · StealthEnomics</p>
 </div>
 
 <div class="container">
 
+<div class="changelog">
+  <h4>What's new in v3</h4>
+  <ul>
+    <li><strong>Headline updated:</strong> "What if you're not a lifelong criminal... but a lifelong entrepreneur?"</li>
+    <li><strong>"You" instead of "they"</strong> — direct address throughout</li>
+    <li><strong>"Equip" instead of "help"</strong> — more empowering, has meaningful purpose</li>
+    <li><strong>"Pathway" framing</strong> — "A pathway to redirect. A pathway to personal freedom."</li>
+    <li><strong>"Street entrepreneur"</strong> — new terminology in the audience description</li>
+    <li><strong>Timeline visual added</strong> — 6 months, 3 phases, 3-week foundation</li>
+    <li><strong>Featured testimonial</strong> — based on Bruce's example: "I was looking for a job — but then I saw your info page..."</li>
+    <li><strong>2nd Chance Entrepreneurship Peer Community</strong> — named entity</li>
+    <li><strong>"It isn't guaranteed"</strong> — used as section title for "Who it's for"</li>
+    <li><strong>NEW: Mentor / Contributor section</strong> — "Do you have a heart for 2nd chance opportunities?" — at the bottom of home, with mentor testimonial and CTA</li>
+  </ul>
+</div>
+
 <div class="toc">
   <h3 style="margin-top:0;color:var(--orange-light);">Contents</h3>
   <ol>
     <li><a href="#voice">Brand Voice & Positioning</a></li>
+    <li><a href="#audiences">Two Audiences Strategy</a></li>
     <li><a href="#visual">Visual Direction</a></li>
     <li><a href="#architecture">Site Architecture</a></li>
     <li><a href="#pages">The Pages</a></li>
@@ -183,15 +223,21 @@
 <section id="voice">
   <div class="section-num">01 · POSITIONING</div>
   <h2>Brand Voice & Positioning</h2>
-  <blockquote>"What if they're not people leaving unlawful lifestyles... but entrepreneurs?"</blockquote>
+  <blockquote>"What if you're not a lifelong criminal... but a lifelong entrepreneur?"</blockquote>
   <blockquote>"Most systems try to fix behavior. That's not the problem. The behavior isn't the issue. It's where it's being applied."</blockquote>
-  <p>The whole site is built around one shift: <strong>your audience already knows how to run something</strong>. They've taken risks, managed people, moved money under pressure. The system wasn't the problem with what they did. The law was.</p>
-  <p>That single move changes how the site sounds. Not "we'll help you become a better person" — the goal isn't a different person, it's the same person doing legal work. The voice should be:</p>
+
+  <p>The whole site is built around one shift: <strong>you already know how to run something</strong>. You've taken risks, managed people, moved money under pressure. The system wasn't the problem with what you did. The law was.</p>
+  <p>What you don't have — what nobody's shown you — is <strong>the path out</strong>. The path that ends in a real business, not another sentence.</p>
+
+  <h3>Voice Rules</h3>
   <ul>
-    <li><strong>Direct.</strong> No charity language. No "journey of healing." Talk to them like adults who already know how the world works.</li>
-    <li><strong>Honest.</strong> Don't oversell. Don't promise. Don't motivate.</li>
-    <li><strong>Specific.</strong> Use real verbs. "Ran something," "moved money," "managed people" — not "redirect their drive."</li>
+    <li><strong>"You" not "they."</strong> Direct address. The audience is reading and recognizing themselves.</li>
+    <li><strong>"Equip" not "help."</strong> Empowering, not patronizing. They're capable adults — we give them tools, we don't rescue them.</li>
+    <li><strong>"Pathway" framing.</strong> The thing they're missing is the path, not the drive. We provide the path.</li>
+    <li><strong>"Street entrepreneur"</strong> — the audience descriptor. They were entrepreneurs in a different market.</li>
+    <li><strong>Direct. Honest. Specific.</strong> No charity language, no journeys of healing, no overselling.</li>
   </ul>
+
   <h3>Trademarked Terms</h3>
   <div class="grid-3">
     <div class="card highlight"><strong>Unlawful Entrepreneurship™</strong></div>
@@ -200,8 +246,32 @@
   </div>
 </section>
 
+<section id="audiences">
+  <div class="section-num">02 · TWO AUDIENCES</div>
+  <h2>Two Audiences Strategy</h2>
+  <p>The site speaks to two audiences with different needs. Here's how the home page handles both without losing focus:</p>
+
+  <div class="grid-2">
+    <div class="card highlight">
+      <h4>Primary: Street Entrepreneurs</h4>
+      <p style="margin-top:10px;">Men and women with a history of Unlawful Entrepreneurship™ who want to redirect their skills.</p>
+      <p style="font-size:0.9rem;color:var(--text-muted);"><strong>What they see:</strong> Most of the home page. The story is theirs. The hero, the problem, the solution, the pathway, the testimonials — it all centers on them.</p>
+      <p style="font-size:0.9rem;color:var(--text-muted);"><strong>Primary CTA:</strong> Register for the Info Session</p>
+    </div>
+    <div class="card blue">
+      <h4>Secondary: Mentors & Contributors</h4>
+      <p style="margin-top:10px;">People with experience or resources who want to give back. Mentors give time. Contributors fund the program.</p>
+      <p style="font-size:0.9rem;color:var(--text-muted);"><strong>What they see:</strong> The full entrepreneur story first (so the mission is clear), then a dedicated section at the bottom of the home page asking them to get involved.</p>
+      <p style="font-size:0.9rem;color:var(--text-muted);"><strong>Primary CTA:</strong> "I want to get involved" → links to /get-involved page (P1, post-launch)</p>
+    </div>
+  </div>
+
+  <p style="margin-top:20px;"><strong>Why this works:</strong> Mentors and donors are persuaded by impact, not by being targeted. When they see the entrepreneur's story first — really feel the mission — the ask hits differently. This is how charity:water, Defy Ventures, and most successful impact nonprofits structure their sites.</p>
+  <p>The Contact form already routes mentor inquiries via the "What brings you here?" dropdown.</p>
+</section>
+
 <section id="visual">
-  <div class="section-num">02 · VISUAL DIRECTION</div>
+  <div class="section-num">03 · VISUAL DIRECTION</div>
   <h2>Visual Direction</h2>
   <div class="grid-2">
     <div class="card">
@@ -219,30 +289,31 @@
 </section>
 
 <section id="architecture">
-  <div class="section-num">03 · SITE ARCHITECTURE</div>
+  <div class="section-num">04 · SITE ARCHITECTURE</div>
   <h2>Site Architecture</h2>
   <div class="grid-2">
     <div class="card highlight">
-      <h4>5 Pages</h4>
+      <h4>5 Pages at Launch</h4>
       <ol>
-        <li><strong>Home</strong> — Tells the full story</li>
+        <li><strong>Home</strong> — Tells the full story, ends with mentor CTA</li>
         <li><strong>About</strong> — Mission + founder</li>
         <li><strong>Services</strong> — What's included</li>
         <li><strong>Blog</strong> — Stories + SEO</li>
-        <li><strong>Contact</strong> — Inquiries</li>
+        <li><strong>Contact</strong> — Inquiries (routes both audiences)</li>
       </ol>
+      <p style="font-size:0.85rem;color:var(--text-muted);margin-top:10px;"><strong>Phase 2:</strong> /get-involved page for deep mentor info</p>
     </div>
     <div class="card blue">
-      <h4>Primary CTA</h4>
-      <p style="margin-top:8px;"><strong>"Register for the Info Session"</strong></p>
-      <p style="font-size:0.9rem;">Every page funnels here. The info session is the entry point — no commitment, no pressure, just a real look at what the program is.</p>
+      <h4>Two CTAs</h4>
+      <p style="margin-top:8px;"><strong>Primary:</strong> "Register for the Info Session" — for entrepreneurs, on every page</p>
+      <p style="font-size:0.9rem;"><strong>Secondary:</strong> "I want to get involved" — for mentors, in the dedicated home section</p>
     </div>
   </div>
   <p><strong>Domain:</strong> 2ndChanceEntrepreneurs.com</p>
 </section>
 
 <section id="pages">
-  <div class="section-num">04 · THE PAGES</div>
+  <div class="section-num">05 · THE PAGES</div>
   <h2>The Pages</h2>
   <p>Click any tab below to see the full mockup with proposed copy in place.</p>
 
@@ -258,44 +329,54 @@
     <div class="mockup-wrapper">
       <div class="mockup-bar"><div class="mockup-dot r"></div><div class="mockup-dot y"></div><div class="mockup-dot g"></div><div class="mockup-url">2ndchanceentrepreneurs.com</div></div>
       <div class="mock-nav"><div class="mock-logo">2nd Chance Entrepreneurs™</div><div class="mock-nav-links"><span>Home</span><span>About</span><span>Services</span><span>Blog</span><span>Contact</span></div><div class="mock-nav-cta">Register</div></div>
+
       <div class="mock-hero">
         <div class="mock-hero-tag">A NEW KIND OF SECOND CHANCE</div>
-        <div class="mock-hero-title">What if they're not people leaving unlawful lifestyles...<br>but entrepreneurs?</div>
-        <div class="mock-hero-sub">You already know how to build a business. We help you build one you don't have to hide.</div>
+        <div class="mock-hero-title">What if you're not a lifelong criminal...<br>but a lifelong entrepreneur?</div>
+        <div class="mock-hero-sub">You already know how to make money. We equip you with the path to make it legally.</div>
         <div class="mock-cta">Register for the Info Session →</div>
       </div>
+
       <div class="mock-section-light">
         <span class="mock-section-tag">THE PROBLEM</span>
-        <h5>Most systems try to fix behavior. That's not the problem.</h5>
+        <h5>You don't need to be fixed. You need a path.</h5>
         <p>Most reentry programs hand you a name tag and tell you to forget what you know.</p>
         <p>But you didn't lose your skills when you got caught. You ran something. You managed people. You moved money. You took risks most people wouldn't touch. The system wasn't the problem with what you did — the law was.</p>
-        <p>The skills don't change. The market does.</p>
+        <p>What's missing isn't the drive. It's the path out.</p>
       </div>
+
       <div class="mock-section-dark">
-        <span class="mock-section-tag">THE SOLUTION</span>
-        <h5>We're not asking you to start over.</h5>
-        <p>2nd Chance Entrepreneurs™ is a nonprofit for people who've already proven they can run something — and now want to run something legal.</p>
-        <p>You get a mentor, a curriculum that's about doing the work (not theory), and a community of people who've been there. The goal isn't a certificate. It's a registered, lawful business with your name on it.</p>
+        <span class="mock-section-tag">THE PATHWAY</span>
+        <h5>A pathway to redirect.<br>A pathway to personal freedom.</h5>
+        <p>2nd Chance Entrepreneurs™ equips street entrepreneurs — men and women with a history of Unlawful Entrepreneurship™ — with the mentorship, education, and infrastructure to redirect their skills into Lawful Entrepreneurship™.</p>
+        <p>The work is yours. The path, we walk with you.</p>
       </div>
+
       <div class="mock-section-light">
-        <span class="mock-section-tag">WHAT YOU GET</span>
+        <span class="mock-section-tag">WHAT WE EQUIP YOU WITH</span>
         <h5>What you actually get.</h5>
         <div class="mock-pillars">
           <div class="mock-pillar"><div class="mock-pillar-icon">M</div><strong>Mentorship</strong><span>A 1-on-1 coach who's built something legal and knows what it actually takes.</span></div>
           <div class="mock-pillar"><div class="mock-pillar-icon">C</div><strong>Curriculum</strong><span>Six modules covering what you actually need: legal setup, money, marketing, ops.</span></div>
-          <div class="mock-pillar"><div class="mock-pillar-icon">I</div><strong>Infrastructure</strong><span>We help with the LLC, the bank account, the website. The basics no one walks you through.</span></div>
-          <div class="mock-pillar"><div class="mock-pillar-icon">P</div><strong>Community</strong><span>A room full of people walking the same path.</span></div>
+          <div class="mock-pillar"><div class="mock-pillar-icon">I</div><strong>Infrastructure</strong><span>The LLC, the bank account, the website — the basics no one walks you through.</span></div>
+          <div class="mock-pillar"><div class="mock-pillar-icon">P</div><strong>Peer Community</strong><span>The 2nd Chance Entrepreneurship Peer Community — real support from people walking the same road.</span></div>
         </div>
       </div>
+
       <div class="mock-section-dark">
         <span class="mock-section-tag">REAL STORIES</span>
-        <h5>Real names. Real businesses.</h5>
+        <h5>You're not the first one to walk this path.</h5>
+        <div class="mock-testimonial-feature">
+          <p>"I was looking for a job. Then I saw your info page and thought — wait. I could actually open a business. That gave me hope of a future. Not just staying out of trouble. A real future."</p>
+          <div class="author">— [Name], [Business]</div>
+        </div>
         <div class="mock-testimonials">
-          <div class="mock-testimonial"><div class="mock-test-avatar"></div><p>"Quote from a graduate goes here. Two to three sentences about what they built, what changed, and where they are now."</p><div class="author">— Name, Business</div></div>
-          <div class="mock-testimonial"><div class="mock-test-avatar"></div><p>"Quote from a graduate goes here. Two to three sentences about what they built, what changed, and where they are now."</p><div class="author">— Name, Business</div></div>
-          <div class="mock-testimonial"><div class="mock-test-avatar"></div><p>"Quote from a graduate goes here. Two to three sentences about what they built, what changed, and where they are now."</p><div class="author">— Name, Business</div></div>
+          <div class="mock-testimonial"><div class="mock-test-avatar"></div><p>"Quote about what they built and what changed."</p><div class="author">— Name, Business</div></div>
+          <div class="mock-testimonial"><div class="mock-test-avatar"></div><p>"Quote about what they built and what changed."</p><div class="author">— Name, Business</div></div>
+          <div class="mock-testimonial"><div class="mock-test-avatar"></div><p>"Quote about what they built and what changed."</p><div class="author">— Name, Business</div></div>
         </div>
       </div>
+
       <div class="mock-section-light">
         <span class="mock-section-tag">FOUNDER</span>
         <div class="mock-founder">
@@ -309,32 +390,84 @@
           </div>
         </div>
       </div>
+
       <div class="mock-section-dark">
-        <span class="mock-section-tag">HOW IT WORKS</span>
-        <h5>Four steps. No mystery.</h5>
-        <div class="mock-journey">
-          <div class="mock-step"><div class="mock-step-num">1</div><strong>Info Session</strong><span>A free, no-pressure walkthrough of how the program works. Nothing to sign.</span></div>
-          <div class="mock-step"><div class="mock-step-num">2</div><strong>Apply</strong><span>A short application. Tell us what you've done and where you're going.</span></div>
-          <div class="mock-step"><div class="mock-step-num">3</div><strong>Match</strong><span>We pair you with a mentor and the curriculum that fits where you are.</span></div>
-          <div class="mock-step"><div class="mock-step-num">4</div><strong>Launch</strong><span>A registered business. Customers. Money in a real bank account.</span></div>
+        <span class="mock-section-tag">THE PATHWAY</span>
+        <h5>Six months. Three phases.<br>From info session to lawful business.</h5>
+        <div class="mock-pathway">
+          <div class="mock-pathway-track">
+            <div class="mock-pathway-steps">
+              <div class="mock-pathway-step">
+                <div class="mock-pathway-step-num">1</div>
+                <div class="mock-pathway-duration">WEEKS 1–3</div>
+                <strong>Foundation</strong>
+                <span>Info session, application, mentor match. The first 3 weeks set the base.</span>
+              </div>
+              <div class="mock-pathway-step">
+                <div class="mock-pathway-step-num">2</div>
+                <div class="mock-pathway-duration">MONTHS 2–4</div>
+                <strong>Build</strong>
+                <span>Legal structure, your market, operations, brand, marketing. You build, we walk with you.</span>
+              </div>
+              <div class="mock-pathway-step">
+                <div class="mock-pathway-step-num">3</div>
+                <div class="mock-pathway-duration">MONTHS 5–6</div>
+                <strong>Launch</strong>
+                <span>Real customers. Real income. A registered business with your name on it.</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="mock-section-light">
         <span class="mock-section-tag">WHO IT'S FOR</span>
-        <h5>This isn't a course. It isn't easy. And it isn't for everyone.</h5>
+        <h5>It isn't guaranteed.<br>It isn't going to be handed to you.</h5>
+        <p>This isn't a course. It isn't a feel-good program. And it isn't easy.</p>
         <p>What you get: a mentor who's built something legal, a curriculum that skips the fluff, weekly meetings that actually move things forward, and a community that gets where you're coming from.</p>
         <p><strong style="color:var(--blue-dark);">You bring the work. We bring everything else.</strong></p>
       </div>
+
       <div class="mock-section-dark">
         <span class="mock-section-tag">OUR COMMITMENT</span>
         <h5>What we promise — and what we don't.</h5>
         <p>We won't promise you success. Anyone who promises that is selling something.</p>
         <p>Here's what we will promise: we show up. We work next to you, not at you. Anything we know, we'll teach. And we don't quit on you when it gets hard.</p>
       </div>
+
       <div class="mock-section-cta">
         <h5>You're not starting over.<br>You're putting your skills somewhere they belong.</h5>
-        <p>You already know how to do this. You just need to do it on the right side of the line.<br>Come to the info session. See if it's a fit. No commitment.</p>
+        <p>The info session is the next step. No commitment. Just a real look at how the program works.</p>
         <div class="mock-cta">Register for the Info Session →</div>
+      </div>
+
+      <div class="mock-section-mentor">
+        <span class="mock-section-tag">GET INVOLVED</span>
+        <h5>Do you have a heart for 2nd chance opportunities?</h5>
+        <p>This work doesn't happen alone. Mentors give time. Contributors give resources. Both build the path that makes everything else possible.</p>
+        <p>If you've built something legal — and you want to help someone else do the same — we'd love to talk. If you can't give time, you can give what supports the time of others.</p>
+
+        <div class="mock-involve-cards">
+          <div class="mock-involve-card">
+            <div class="mock-involve-icon">🤝</div>
+            <strong>Mentor</strong>
+            <span>Share your experience with someone walking the path. Monthly hours, real impact.</span>
+          </div>
+          <div class="mock-involve-card">
+            <div class="mock-involve-icon">💛</div>
+            <strong>Contribute</strong>
+            <span>Fund the curriculum, the community, the mentors. Every dollar walks someone closer to launch.</span>
+          </div>
+        </div>
+
+        <div class="mock-testimonial-feature" style="margin-top:30px;">
+          <p>"I started mentoring because I remembered what it felt like to want a different life and not know where to start. The honest answer is — I get more out of this than they do."</p>
+          <div class="author" style="color:var(--orange-light);">— [Mentor Name], [Background]</div>
+        </div>
+
+        <div style="text-align:center;margin-top:30px;">
+          <div class="mock-cta">I want to get involved →</div>
+        </div>
       </div>
     </div>
   </div>
@@ -345,19 +478,20 @@
       <div class="mock-nav"><div class="mock-logo">2nd Chance Entrepreneurs™</div><div class="mock-nav-links"><span>Home</span><span style="color:var(--orange);">About</span><span>Services</span><span>Blog</span><span>Contact</span></div><div class="mock-nav-cta">Register</div></div>
       <div class="mock-hero" style="padding:60px 50px;">
         <div class="mock-hero-title">A new model for second chances.</div>
-        <div class="mock-hero-sub">For people who already know how to run something. They just need to run something legal.</div>
+        <div class="mock-hero-sub">Built for street entrepreneurs ready to redirect what they already know.</div>
       </div>
       <div class="mock-section-light">
         <span class="mock-section-tag">WHY THIS EXISTS</span>
         <h5>The skills are real. They just got pointed in the wrong direction.</h5>
         <p>The system has a bad habit of treating people coming out of unlawful lives like they need to be fixed. They don't.</p>
-        <p>Most of them have already done the hardest part of being an entrepreneur — taken risks, made decisions under pressure, moved money, led people, built something out of nothing. The skills are real. They just got pointed in the wrong direction.</p>
-        <p>2nd Chance Entrepreneurs™ exists to point them somewhere they can keep.</p>
+        <p>What's missing is the path. Most have already done the hardest part of being an entrepreneur — taken risks, made decisions under pressure, moved money, led people, built something out of nothing. The problem was never their capacity. It was where it was being applied.</p>
+        <p>2nd Chance Entrepreneurs™ exists to give that capacity a legal home — and a meaningful purpose.</p>
       </div>
       <div class="mock-section-dark">
         <span class="mock-section-tag">MISSION</span>
         <h5>Our mission.</h5>
-        <p>We help men and women with a history of Unlawful Entrepreneurship™ build legal businesses they can be proud of. Through mentorship, education, and a network of people who've done it before.</p>
+        <p>We equip street entrepreneurs — men and women with a history of Unlawful Entrepreneurship™ — with the mentorship, education, and infrastructure to redirect their skills into Lawful Entrepreneurship™.</p>
+        <p>The goal isn't a certificate. It's a registered, lawful business with their name on it. And a future they couldn't see before.</p>
       </div>
       <div class="mock-section-light">
         <span class="mock-section-tag">FOUNDER</span>
@@ -411,19 +545,23 @@
         <span class="mock-section-tag">THREE PILLARS</span>
         <h5>Three pillars of support.</h5>
         <div class="mock-pillars three">
-          <div class="mock-pillar"><div class="mock-pillar-icon">1</div><strong>Mentorship</strong><span>One-on-one with someone who's built something</span></div>
+          <div class="mock-pillar"><div class="mock-pillar-icon">1</div><strong>Mentorship</strong><span>One-on-one with someone who's built something legal</span></div>
           <div class="mock-pillar"><div class="mock-pillar-icon">2</div><strong>Education</strong><span>Doing the work, not learning about it</span></div>
-          <div class="mock-pillar"><div class="mock-pillar-icon">3</div><strong>Community</strong><span>Same path, same work</span></div>
+          <div class="mock-pillar"><div class="mock-pillar-icon">3</div><strong>Community</strong><span>2nd Chance Entrepreneurship Peer Community</span></div>
         </div>
       </div>
       <div class="mock-section-light">
-        <span class="mock-section-tag">MENTORSHIP</span>
-        <h5>Mentorship Program.</h5>
-        <ul class="mock-list">
-          <li>Weekly 1-on-1 sessions with someone who's built something</li>
-          <li>Direct line for questions between sessions</li>
-          <li>12-month commitment (this isn't a 4-week sprint)</li>
-        </ul>
+        <span class="mock-section-tag">THE PATHWAY</span>
+        <h5>Six months. Three phases.</h5>
+        <div class="mock-pathway">
+          <div class="mock-pathway-track">
+            <div class="mock-pathway-steps">
+              <div class="mock-pathway-step"><div class="mock-pathway-step-num">1</div><div class="mock-pathway-duration">WEEKS 1–3</div><strong>Foundation</strong><span>Info session, apply, mentor match</span></div>
+              <div class="mock-pathway-step"><div class="mock-pathway-step-num">2</div><div class="mock-pathway-duration">MONTHS 2–4</div><strong>Build</strong><span>Curriculum + execution</span></div>
+              <div class="mock-pathway-step"><div class="mock-pathway-step-num">3</div><div class="mock-pathway-duration">MONTHS 5–6</div><strong>Launch</strong><span>Real customers, real revenue</span></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="mock-section-dark">
         <span class="mock-section-tag">CURRICULUM</span>
@@ -438,13 +576,13 @@
         </div>
       </div>
       <div class="mock-section-light">
-        <span class="mock-section-tag">COMMUNITY</span>
-        <h5>Peer Community.</h5>
+        <span class="mock-section-tag">PEER COMMUNITY</span>
+        <h5>The 2nd Chance Entrepreneurship Peer Community.</h5>
         <ul class="mock-list">
           <li>Private group of every current and past participant</li>
-          <li>Monthly group calls</li>
-          <li>Quarterly meetups (in person)</li>
-          <li>Resources, tools, and templates we've collected</li>
+          <li>Monthly group calls — share what's working, what's not</li>
+          <li>Quarterly meetups (in person or webinar/group session)</li>
+          <li>Resources, tools, and templates we've collected along the way</li>
         </ul>
       </div>
       <div class="mock-section-dark">
@@ -507,6 +645,7 @@
           <li>"second chance entrepreneur programs"</li>
           <li>"business mentorship after incarceration"</li>
           <li>"Philadelphia business programs for ex-offenders"</li>
+          <li>"street entrepreneur to lawful entrepreneur"</li>
           <li>"lawful entrepreneurship" (your trademarked term)</li>
         </ul>
         <p style="margin-top:14px;"><strong>Posting cadence:</strong> 1-2 posts per month, mix of all 4 categories.</p>
@@ -520,7 +659,7 @@
       <div class="mock-nav"><div class="mock-logo">2nd Chance Entrepreneurs™</div><div class="mock-nav-links"><span>Home</span><span>About</span><span>Services</span><span>Blog</span><span style="color:var(--orange);">Contact</span></div><div class="mock-nav-cta">Register</div></div>
       <div class="mock-hero" style="padding:60px 50px;">
         <div class="mock-hero-title">Let's talk.</div>
-        <div class="mock-hero-sub">Whether you're ready to apply or just want to ask questions, we want to hear from you.</div>
+        <div class="mock-hero-sub">Whether you're ready to apply, want to mentor, or want to support — we want to hear from you.</div>
       </div>
       <div class="mock-section-light">
         <span class="mock-section-tag">INTRO</span>
@@ -553,18 +692,26 @@
 </section>
 
 <section id="funnel">
-  <div class="section-num">05 · VISITOR JOURNEY</div>
+  <div class="section-num">06 · VISITOR JOURNEY</div>
   <h2>How Visitors Move Through the Site</h2>
-  <p>Every page on the site funnels to one place: the info session. From there, the path to the program is clear.</p>
-  <div class="card highlight">
-    <p style="font-family:monospace;font-size:0.95rem;line-height:1.8;text-align:center;">Any Page<br>↓<br><strong>"Register for the Info Session"</strong><br>↓<br>Registration Form → Confirmation<br>↓<br>Email Reminders (3 days · 1 day · 3 hours before)<br>↓<br><strong>Info Session</strong><br>↓<br>Application → Program Enrollment</p>
+  <p>Two paths through the site, both clear:</p>
+
+  <div class="grid-2">
+    <div class="card highlight">
+      <h4>Entrepreneur Path</h4>
+      <p style="font-family:monospace;font-size:0.85rem;line-height:1.7;margin-top:10px;">Any Page<br>↓<br>"Register for the Info Session"<br>↓<br>Registration Form → Confirmation<br>↓<br>Email Reminders<br>↓<br>Info Session (webinar or in-person)<br>↓<br>Application → Mentor Match<br>↓<br>6-Month Pathway</p>
+    </div>
+    <div class="card blue">
+      <h4>Mentor / Contributor Path</h4>
+      <p style="font-family:monospace;font-size:0.85rem;line-height:1.7;margin-top:10px;">Home Page<br>↓<br>(Sees mission first)<br>↓<br>Mentor section at bottom<br>↓<br>"I want to get involved"<br>↓<br>/get-involved page (Phase 2)<br>↓<br>Or Contact form with mentor option<br>↓<br>Bruce reaches out personally</p>
+    </div>
   </div>
 </section>
 
 </div>
 
 <footer>
-  <p>2nd Chance Entrepreneurs™ — Website Strategy</p>
+  <p>2nd Chance Entrepreneurs™ — Website Strategy v3</p>
   <p style="margin-top:8px;">Prepared by Marina Scheffer de Araujo · StealthEnomics · May 2026</p>
 </footer>
 
